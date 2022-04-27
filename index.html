@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NhacCuaTui Clone - Nghe nhạc mới HOT nhất, tải nhạc MP3 chất lượng cao</title>
+
+    <!-- Link reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Link font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Link favicon -->
+    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon" />
+
+    <!-- Link icon -->
+    <link rel="stylesheet" href="./assets/font-icon/themify-icons/themify-icons.css">
+
+    <!-- Link CSS -->
+    <!-- ratings link css -->
+    <!-- 1. Grid.css -->
+    <!-- 2. Base.css -->
+    <!-- 3. Style.css -->
+    <!-- 4. Responsive.css -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <div class="main">
+        <!-- Header -->
+        <div class="header">
+            <div class="grid wide">
+                <div class="header__wrapper">
+                    <div class="header__sub__menu">
+                        <ul class="header__menu__list">
+                            <li class="header__menu__item header__logo">
+                                <img src="./assets/img/logo.png" alt="" class="header__logo__img">
+                            </li>
+                            <li class="header__menu__item header__new__version">
+                                <img src="./assets/img/ic_new.png" alt="" class="header__new__version__img">
+                            </li>
+                            <li class="header__menu__item">
+                                <a href="" class="menu__item__link">Bài Hát</a>
+                                <ul class="menu__item__list">
+                                    <li style="display: flex">
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Việt Nam</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Trẻ</li>
+                                            <li class="sub__menu__item">Trữ Tình</li>
+                                            <li class="sub__menu__item">Remix Việt</li>
+                                            <li class="sub__menu__item">Rap Việt</li>
+                                            <li class="sub__menu__item">Tiền Chiến</li>
+                                            <li class="sub__menu__item">Nhạc Trịnh</li>
+                                            <li class="sub__menu__item">Rock Việt</li>
+                                            <li class="sub__menu__item">Cách Mạng</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Âu Mỹ</b>
+                                            </li>
+                                            <li class="sub__menu__item">Pop</li>
+                                            <li class="sub__menu__item">Rock</li>
+                                            <li class="sub__menu__item">Electronica/Dance</li>
+                                            <li class="sub__menu__item">R&B/HipHop/Rap</li>
+                                            <li class="sub__menu__item">Blues/Jazz</li>
+                                            <li class="sub__menu__item">Country</li>
+                                            <li class="sub__menu__item">Latin</li>
+                                            <li class="sub__menu__item">Indie</li>
+                                            <li class="sub__menu__item">Âu Mỹ khác</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Châu Á</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Hàn</li>
+                                            <li class="sub__menu__item">Nhạc Hoa</li>
+                                            <li class="sub__menu__item">Nhạc Nhật</li>
+                                            <li class="sub__menu__item">Nhạc Thái</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Khác</b>
+                                            </li>
+                                            <li class="sub__menu__item">Thiếu Nhi</li>
+                                            <li class="sub__menu__item">Không Lời</li>
+                                            <li class="sub__menu__item">Beat</li>
+                                            <li class="sub__menu__item">Thể Loại Khác</li>
+                                            <li class="sub__menu__item">Tui Hát</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu__item">
+                                <a href="" class="menu__item__link">Playlist</a>
+                                <ul class="menu__item__list">
+                                    <li style="display: flex">
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Việt Nam</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Trẻ</li>
+                                            <li class="sub__menu__item">Trữ Tình</li>
+                                            <li class="sub__menu__item">Remix Việt</li>
+                                            <li class="sub__menu__item">Rap Việt</li>
+                                            <li class="sub__menu__item">Tiền Chiến</li>
+                                            <li class="sub__menu__item">Nhạc Trịnh</li>
+                                            <li class="sub__menu__item">Rock Việt</li>
+                                            <li class="sub__menu__item">Cách Mạng</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Âu Mỹ</b>
+                                            </li>
+                                            <li class="sub__menu__item">Pop</li>
+                                            <li class="sub__menu__item">Rock</li>
+                                            <li class="sub__menu__item">Electronica/Dance</li>
+                                            <li class="sub__menu__item">R&B/HipHop/Rap</li>
+                                            <li class="sub__menu__item">Blues/Jazz</li>
+                                            <li class="sub__menu__item">Country</li>
+                                            <li class="sub__menu__item">Latin</li>
+                                            <li class="sub__menu__item">Indie</li>
+                                            <li class="sub__menu__item">Âu Mỹ khác</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Châu Á</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Hàn</li>
+                                            <li class="sub__menu__item">Nhạc Hoa</li>
+                                            <li class="sub__menu__item">Nhạc Nhật</li>
+                                            <li class="sub__menu__item">Nhạc Thái</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Khác</b>
+                                            </li>
+                                            <li class="sub__menu__item">Thiếu Nhi</li>
+                                            <li class="sub__menu__item">Không Lời</li>
+                                            <li class="sub__menu__item">Beat</li>
+                                            <li class="sub__menu__item">Thể Loại Khác</li>
+                                            <li class="sub__menu__item">Tui Hát</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu__item">
+                                <a href="" class="menu__item__link">Tuyển Tập</a>
+                                <ul class="menu__item__list">
+                                    <li style="display: flex">
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Thể Loại</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Trẻ</li>
+                                            <li class="sub__menu__item">Trữ Tình</li>
+                                            <li class="sub__menu__item">Pop</li>
+                                            <li class="sub__menu__item">Nhạc Hàn</li>
+                                            <li class="sub__menu__item">Nhạc Hoa</li>
+                                            <li class="sub__menu__item">Soundtrack</li>
+                                            <li class="sub__menu__item">Không Lời</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Tâm Trạng</b>
+                                            </li>
+                                            <li class="sub__menu__item">Buồn</li>
+                                            <li class="sub__menu__item">Hưng Phấn</li>
+                                            <li class="sub__menu__item">Nhạy Cảm</li>
+                                            <li class="sub__menu__item">Nhớ Nhung</li>
+                                            <li class="sub__menu__item">Thất Tình</li>
+                                            <li class="sub__menu__item">Thư Giãn</li>
+                                            <li class="sub__menu__item">Vui vẻ</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Khung Cảnh</b>
+                                            </li>
+                                            <li class="sub__menu__item">Cafe</li>
+                                            <li class="sub__menu__item">Bar - Club</li>
+                                            <li class="sub__menu__item">Phòng trà</li>
+                                            <li class="sub__menu__item">Tắm - Bơi lội</li>
+                                            <li class="sub__menu__item">Tập Gym</li>
+                                            <li class="sub__menu__item">Lãng Mạn</li>
+                                            <li class="sub__menu__item">Mưa</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">
+                                                <b>Chủ đề</b>
+                                            </li>
+                                            <li class="sub__menu__item">Tình Yêu</li>
+                                            <li class="sub__menu__item">Top 100</li>
+                                            <li class="sub__menu__item">Weekend</li>
+                                            <li class="sub__menu__item">Chill Out</li>
+                                            <li class="sub__menu__item">Bất Hủ</li>
+                                            <li class="sub__menu__item">Song ca</li>
+                                            <li class="sub__menu__item">Mashup</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu__item">
+                                <a href="" class="menu__item__link">Video</a>
+                                <ul class="menu__item__list">
+                                    <li style="display: flex">
+                                        <ul class="sub__menu__list list--five__item">
+                                            <li class="sub__menu__item">
+                                                <b>Việt Nam</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Trẻ</li>
+                                            <li class="sub__menu__item">Trữ Tình</li>
+                                            <li class="sub__menu__item">Cách Mạng</li>
+                                            <li class="sub__menu__item">Rap Việt</li>
+                                            <li class="sub__menu__item">Rock Việt</li>
+                                        </ul>
+                                        <ul class="sub__menu__list list--five__item">
+                                            <li class="sub__menu__item">
+                                                <b>Âu Mỹ</b>
+                                            </li>
+                                            <li class="sub__menu__item">Pop</li>
+                                            <li class="sub__menu__item">Rock</li>
+                                            <li class="sub__menu__item">Electronica/Dance</li>
+                                            <li class="sub__menu__item">R&B/HipHop/Rap</li>
+                                            <li class="sub__menu__item">Blues/Jazz</li>
+                                            <li class="sub__menu__item">Country</li>
+                                            <li class="sub__menu__item">Latin</li>
+                                            <li class="sub__menu__item">Indie</li>
+                                            <li class="sub__menu__item">Âu Mỹ khác</li>
+                                        </ul>
+                                        <ul class="sub__menu__list list--five__item">
+                                            <li class="sub__menu__item">
+                                                <b>Châu Á</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Hàn</li>
+                                            <li class="sub__menu__item">Nhạc Hoa</li>
+                                            <li class="sub__menu__item">Nhạc Nhật</li>
+                                            <li class="sub__menu__item">Nhạc Thái</li>
+                                        </ul>
+                                        <ul class="sub__menu__list list--five__item">
+                                            <li class="sub__menu__item">
+                                                <b>Karaoke</b>
+                                            </li>
+                                            <li class="sub__menu__item">Nhạc Trẻ</li>
+                                            <li class="sub__menu__item">Trữ Tình</li>
+                                            <li class="sub__menu__item">Remix Việt</li>
+                                            <li class="sub__menu__item">Thiếu Nhi</li>
+                                            <li class="sub__menu__item">Âu Mỹ</li>
+                                            <li class="sub__menu__item">Thể Loại Khác</li>
+                                        </ul>
+                                        <ul class="sub__menu__list list--five__item">
+                                            <li class="sub__menu__item">
+                                                <b>Khác</b>
+                                            </li>
+                                            <li class="sub__menu__item">Clip Vui</li>
+                                            <li class="sub__menu__item">Hài Kịch</li>
+                                            <li class="sub__menu__item">Thiếu Nhi</li>
+                                            <li class="sub__menu__item">Thể Loại Khác</li>
+                                            <li class="sub__menu__item">Giải Trí Khác</li>
+                                            <li class="sub__menu__item">Phim Việt Nam</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu__item">
+                                <a href="" class="menu__item__link">BXH</a>
+                                <ul class="menu__item__list list--alone">
+                                    <li class="sub__menu__item">Việt Nam</li>
+                                    <li class="sub__menu__item">Âu Mỹ</li>
+                                    <li class="sub__menu__item">Hàn Quốc</li>
+                                </ul>
+                            </li>
+                            <li class="header__menu__item">
+                                <a href="" class="menu__item__link">Chủ Đề</a>
+                                <ul class="menu__item__list header__list__theme">
+                                    <li style="display: flex">
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">The Best Of 2021</li>
+                                            <li class="sub__menu__item">Hot US-UK</li>
+                                            <li class="sub__menu__item">Indie</li>
+                                            <li class="sub__menu__item">Bất Hủ Âu Mỹ</li>
+                                            <li class="sub__menu__item">Cover & Mashup</li>
+                                            <li class="sub__menu__item">Lofi</li>
+                                            <li class="sub__menu__item">Nhạc Thiếu Nhi</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">Chill Out</li>
+                                            <li class="sub__menu__item">EDM</li>
+                                            <li class="sub__menu__item">Nhạc Hot</li>
+                                            <li class="sub__menu__item">Nhạc Hoa Lời Việt</li>
+                                            <li class="sub__menu__item">Coffee Time</li>
+                                            <li class="sub__menu__item">Nhạc Phim</li>
+                                            <li class="sub__menu__item">Nhạc Buồn</li>
+                                        </ul>
+                                        <ul class="sub__menu__list">
+                                            <li class="sub__menu__item">Acoustic</li>
+                                            <li class="sub__menu__item">Hôm Nay Nghe Gì</li>
+                                            <li class="sub__menu__item">Remix Việt</li>
+                                            <li class="sub__menu__item">Bài Hát Yêu Thích</li>
+                                            <li class="sub__menu__item">Gym</li>
+                                            <li class="sub__menu__item">Bolero</li>
+                                            <li class="sub__menu__item">Piano</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu__item">
+                                <a href="" class="menu__item__link">Top 100</a>
+                                <ul class="menu__item__list list--alone top100__music">
+                                    <li class="sub__menu__item" data-object="top100_VN">Việt Nam</li>
+                                    <li class="sub__menu__item" data-object="top100_AM">Âu Mỹ</li>
+                                    <li class="sub__menu__item" data-object="top100_CA">Châu Á</li>
+                                    <li class="sub__menu__item" data-object="top100_KL">Không Lời</li>
+                                </ul>
+                            </li>
+                            <li class="header__menu__item header__menu__more">
+                                <a href="" class="menu__item__link">
+                                    <i class="ti-more-alt"></i>
+                                </a>
+                                <ul class="menu__item__list list--alone">
+                                    <li class="sub__menu__item">Khám Phá</li>
+                                    <li class="sub__menu__item">Nghệ Sĩ</li>
+                                    <li class="sub__menu__item">Tin Tức Âm Nhạc</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-interactive">
+                        <div class="header__search__wrapper">
+                            <form action="">
+                                <div class="header__search">
+                                    <i class="ti-search header__search__icon"></i>
+                                    <input placeholder="Tìm kiếm" type="text" class="header__search__input">
+                                    <div class="header__search__history">
+                                        <h3 class="search__history__heading">Top Từ Khóa Tìm Kiếm Nhiều Nhất</h3>
+                                        <ul class="search__history__topKeyWord">
+                                            <li class="search__history__topsearch">
+                                                <span class="topSearch__order" id="order-1">1</span>
+                                                Duyên Phận Trớ Trêu
+                                            </li>
+                                            <li class="search__history__topsearch">
+                                                <span class="topSearch__order" id="order-2">2</span>
+                                                Sau Ngày Chia Tay
+                                            </li>
+                                            <li class="search__history__topsearch">
+                                                <span class="topSearch__order" id="order-3">3</span>
+                                                Và Ngày Nào Đó
+                                            </li>
+                                            <li class="search__history__topsearch">
+                                                <span class="topSearch__order" id="order-4">4</span>
+                                                Poker Face
+                                            </li>
+                                            <li class="search__history__topsearch">
+                                                <span class="topSearch__order" id="order-5">5</span>
+                                                Still Life - BIGBANG
+                                            </li>
+                                        </ul>
+                                        <h3 class="search__history__heading">
+                                            Lịch Sử Tìm Kiếm Của Bạn
+                                            <i class="ti-trash search__history__delete"></i>
+                                        </h3>
+                                        <ul class="search__history__user__list">
+                                            <li class="search__history__user__item">Không có lịch sử tìm kiếm nào</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="header__payment">
+                            <img src="./assets/img/payment_icon.png" alt="" class="header__payment__img">
+                        </div>
+                        <div class="header__upload">
+                            <img src="./assets/img/upload_icon.png" alt="" class="header__upload__img">
+                        </div>
+                        <div class="header__login btn">
+                            Đăng nhập
+                        </div>
+                        <div class="header__register btn">
+                            Đăng ký
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Slider -->
+            <div class="slider">
+                <i class="ti-angle-left slider__arrow slider--prev"></i>
+                <i class="ti-angle-right slider__arrow slider--next"></i>
+                <ul class="slider__dots">
+                    <li class="slider__dot__item slider__dot--active" data-index="0"></li>
+                    <li class="slider__dot__item" data-index="1"></li>
+                    <li class="slider__dot__item" data-index="2"></li>
+                    <li class="slider__dot__item" data-index="3"></li>
+                    <li class="slider__dot__item" data-index="4"></li>
+                </ul>
+                <div class="slider__wrapper">
+                    <div class="slider__track">
+                        <div class="slider__item" data-index="0">
+                            <img src="./assets/img/slide4.jpg" alt="" class="slider__item__img">
+                        </div>
+            
+                        <div class="slider__item" data-index="1">
+                            <img src="./assets/img/slide5.jpg" alt="" class="slider__item__img">
+                        </div>
+        
+                        <div class="slider__item slider--center" data-index="2">
+                            <img src="./assets/img/slide1.jpg" alt="" class="slider__item__img">
+                        </div>
+            
+                        <div class="slider__item" data-index="3">
+                            <img src="./assets/img/slide2.jpg" alt="" class="slider__item__img">
+                        </div>
+            
+                        <div class="slider__item" data-index="4">
+                            <img src="./assets/img/slide3.jpg" alt="" class="slider__item__img">
+                        </div>
+            
+                        <div class="slider__item" data-index="5">
+                            <img src="./assets/img/slide4.jpg" alt="" class="slider__item__img">
+                        </div>
+            
+                        <div class="slider__item" data-index="6">
+                            <img src="./assets/img/slide5.jpg" alt="" class="slider__item__img">
+                        </div>
+            
+                        <div class="slider__item" data-index="7">
+                            <img src="./assets/img/slide1.jpg" alt="" class="slider__item__img">
+                        </div>
+            
+                        <div class="slider__item" data-index="8">
+                            <img src="./assets/img/slide2.jpg" alt="" class="slider__item__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Music -->
+            <div class="box-wrapper">
+                <div class="grid wide">
+                    <div class="row">
+                        <!-- Box left -->
+                        <div class="col l-9">
+                            <div class="box--left">
+                                <div class="list__album__wrapper">
+                                    <div class="list__album__heading">
+                                        <h2>KHÁM PHÁ MỚI</h2>
+                                    </div>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/nhactregaynghien.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Nhạc Trẻ Gây Nghiện</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/kpop_on.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">K-POP ON!</span>
+                                        </li>
+    
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/top20_vpop.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">20 Ca Khúc Nhạc Trẻ Hot Nhất Tuần</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/kpop_daebak.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">K-Pop Deabak</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/debut_song.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">US-UK Debut Songs</span>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="list__album__wrapper">
+                                    <div class="list__album__heading">
+                                        <h2>NHỮNG NGÀY GIÓ MƯA RƠI</h2>
+                                    </div>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/rain.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Dưới Những Cơn Mưa - Nhạc Buồn Và Tâm Trạng</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/street.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Mưa Qua Phố Vắng - Nhạc Trữ Tình Hay Nhất Về Mưa</span>
+                                        </li>
+    
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/kyucmua.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Ký Ức Mưa</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/muacungnoinho.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Mưa Cùng Nỗi Nhớ</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/conmuathanhxuan.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Cơn Mưa Tuổi Thanh Xuân</span>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="list__album__wrapper">
+                                    <div class="list__album__heading">
+                                        <h2>ĐÀ LẠT CUỐI TUẦN</h2>
+                                    </div>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/acoustic_coffee.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Acoustic Cà Phê Tối Lãng Mạn</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/anhdanh.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Anh Dành Cho Em Hết</span>
+                                        </li>
+    
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/coffee.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Acoustic Cà Phê Cuối Tuần</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/chonoibuontrongtim.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Acoustic Cho Nỗi Buồn Trong Tim</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/coffee__buon.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Acoustic & Cà Phê Buồn</span>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="list__album__wrapper">
+                                    <div class="list__album__heading">
+                                        <h2>
+                                            MỚI PHÁT HÀNH
+                                            <span class="list__album--arrow"></span>
+                                        </h2>
+                                    </div>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-headphone"></i>
+                                                    <div class="list__album__listens__view">
+                                                        518.716
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/bray.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Cưới Em</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">B Ray</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-headphone"></i>
+                                                    <div class="list__album__listens__view">
+                                                        95.415
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/chitay.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">OK Em Buồn</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Hoàng Yến Chibi</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Dư Quốc Vương</span>
+                                            </div>
+    
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-headphone"></i>
+                                                    <div class="list__album__listens__view">
+                                                        23.274
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/bae.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Bae</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Phát Huy T4</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Như Ý</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-headphone"></i>
+                                                    <div class="list__album__listens__view">
+                                                        61.126
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/tuoigi.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Tuổi Gì...!</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">SUZIE</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-headphone"></i>
+                                                    <div class="list__album__listens__view">
+                                                        3.054
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/cautraloi.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Câu Trả Lời</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Mcee Blue</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Zury</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/felling.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">The Feelings</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">The Fillin</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Changg</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/jametw.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Heartbeat Changes (Part 1)</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">James TW</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/familia.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Familia</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Camila Cabello</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/crash.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Crash (Deluxe)</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Charli XCX</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="./assets/img/didn'tsay.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                            </div>
+                                            <span class="list__album__name">Everything I Didn't Say</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Ella Henderson</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="list__album__wrapper">
+                                    <div class="list__album__heading">
+                                        <h2>
+                                            MV HOT
+                                            <span class="list__album--arrow"></span>
+                                        </h2>
+                                    </div>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item list__mv__item--bigger">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        1755
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/coemladu.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <div class="list__album__info">
+                                                    <span class="list__album__name">Có Em Là Đủ</span>
+                                                    <div class="album__name__singer__wrapper">
+                                                        <span class="album__name__singer">Will</span>
+                                                    </div>
+                                                    <span class="list__album__time">03:33</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item list__mv__item--bigger">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        533
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/meincattrang.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <div class="list__album__info">
+                                                    <span class="list__album__name">Miền Cát Trắng (Moodshow The 2nd Show)</span>
+                                                    <div class="album__name__singer__wrapper">
+                                                        <span class="album__name__singer">Bảo Anh</span>
+                                                    </div>
+                                                    <span class="list__album__time">04:00</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        409
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/vi1nguoi.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">04:27</span>
+    
+                                            </div>
+                                            <span class="list__album__name">Vì Một Người</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Quang Vinh</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Yến Trang</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        214
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/yeulamchi.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">03:47</span>
+    
+                                            </div>
+                                            <span class="list__album__name">Yêu Làm Chi (The Show: Hát Cho Em)</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Isaac</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        160
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/dalothuonganh.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">03:36</span>
+    
+                                            </div>
+                                            <span class="list__album__name">Đã Lỡ Thương Anh Mất Rồi</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">minhnhat</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Tom</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">PhamQuynh</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        91
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/please_say_bye.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">03:16</span>
+    
+                                            </div>
+                                            <span class="list__album__name">Please, Say Bye</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Gemini Band</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        104
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/meganix.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">06:10</span>
+    
+                                            </div>
+                                            <span class="list__album__name">The Megamix</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Little Mix</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Saweetie</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        37
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/onerightnow.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">03:47</span>
+    
+                                            </div>
+                                            <span class="list__album__name">One Right Now</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Post Malone</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">The Weeknd</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        14.105
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/chayvenoiphiaanh.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">03:02</span>
+    
+                                            </div>
+                                            <span class="list__album__name">Chạy Về Nơi Phía Anh</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">Khắc Việt</span>
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item list__mv__item--small">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <div class="list__album__listens">
+                                                    <i class="ti-eye"></i>
+                                                    <div class="list__album__listens__view">
+                                                        10.517
+                                                    </div>
+                                                </div>
+                                                <img src="./assets/img/chanmay.jpg" alt="" class="list__album__img">
+                                                <a href="" class="list__album__play"></a>
+                                                <span class="list__album__time">04:25</span>
+    
+                                            </div>
+                                            <span class="list__album__name">Chân Mây</span>
+                                            <div class="album__name__singer__wrapper">
+                                                <span class="album__name__singer">K-ICM</span>
+                                                <span class="album__comma">,</span>
+                                                <span class="album__name__singer">Phương Thanh</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="list__album__wrapper">
+                                    <div class="list__album__heading">
+                                        <h2>
+                                            BÀI HÁT
+                                            <span class="list__album--arrow"></span>
+                                        </h2>
+                                    </div>
+    
+                                    <ul class="list__album" style="display: block">
+                                        <li class="list__music__wrapper">
+                                            <ul class="list__music">
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/henkiepsau.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Hẹn Kiếp Sau</div>
+                                                            <div class="list__music__singer">Khả Hiệp</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        2.526.691
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/duyenphantrotreu.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Duyên Phận Trớ Trêu</div>
+                                                            <div class="list__music__singer">Cao Nam Thành</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        13.360
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/nghecoaykhoc.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Nghe Cô Ấy Khóc Trên Radio</div>
+                                                            <div class="list__music__singer">Thái Đinh</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        709
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/usedtome.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Used To Know Me</div>
+                                                            <div class="list__music__singer">Charli XCX</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        22.984
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/troyesivan.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Angle Baby (Acoustic)</div>
+                                                            <div class="list__music__singer">Troye Sivan</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        464
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/still_life.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Still Life</div>
+                                                            <div class="list__music__singer">BIGBANG</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        155.035
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+    
+                                            <ul class="list__music">
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/dungsainamodau.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Đúng Sai Nằm Ở Đâu (Theme Song From "Ranh Giới Gia Tộc”)</div>
+                                                            <div class="list__music__singer">S-Quang Ngọc</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        273.974
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/hennhautronggiacmo.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Hẹn Nhau Trong Giấc Mơ</div>
+                                                            <div class="list__music__singer">Quốc Thiên</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        5.808
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/aboutdammtime.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">About Damm Time</div>
+                                                            <div class="list__music__singer">Lizzo</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        1.048
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/alone.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Alone</div>
+                                                            <div class="list__music__singer">Rhys Lewis</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        19
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/whatitfellike.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">What It Feels Like</div>
+                                                            <div class="list__music__singer">Navos</div>
+                                                            <span class="music__comma">, </span>
+                                                            <div class="list__music__singer">Galantis</div>
+                                                            <span class="music__comma">, </span> 
+                                                            <div class="list__music__singer">You</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        15
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                                <li class="list__music__item">
+                                                    <div class="list__music__info">
+                                                        <img src="./assets/img/chanmay_music.jpg" alt="" class="list__music__img">
+                                                        <div style="margin-left: 10px">
+                                                            <div class="list__music__name">Chân Mây</div>
+                                                            <div class="list__music__singer">K-ICM</div>
+                                                            <span class="music__comma">, </span> 
+                                                            <div class="list__music__singer">Phương Thanh</div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="list__music__listens">
+                                                        <i class="ti-headphone"></i>
+                                                        259.816
+                                                    </span>
+                                                    <div class="list__music__action">
+                                                        <span class="list__music__add__playlist"></span>
+                                                        <span class="list__music__play"></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="list__album__wrapper">
+                                    <div class="list__album__heading">
+                                        <h2>
+                                            TOP 100
+                                            <span class="list__album--arrow"></span>
+                                        </h2>
+                                    </div>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <img src="https://avatar-ex-swe.nixcdn.com/playlist/2020/09/16/e/1/f/f/1600244112678.jpg" alt="" class="list__album__img">
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <img src="https://avatar-ex-swe.nixcdn.com/playlist/2020/09/16/e/1/f/f/1600250721042.jpg" alt="" class="list__album__img">
+                                            </div>
+                                        </li>
+    
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/04/08/5/5/a/6/1617867524987.jpg" alt="" class="list__album__img">
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/05/26/b/e/2/9/1622014540231.jpg" alt="" class="list__album__img">
+                                            </div>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/11/02/b/4/7/0/1635818384011.jpg" alt="" class="list__album__img">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="list__album__wrapper weekly__artist__chart">
+                                    <div class="list__album__heading">
+                                        <h2>
+                                            Weekly artist chart
+                                            <span class="list__album--arrow"></span>
+                                        </h2>
+                                    </div>
+    
+                                    <ul class="list__album">
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2021/07/01/d/4/7/8/1625125665949_600.jpg" alt="" class="list__album__img">
+                                            </div>
+                                            <span class="list__album__name">Anh Khoa (Cover)</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2020/09/07/9/8/7/e/1599443552050_600.jpg" alt="" class="list__album__img">
+                                            </div>
+                                            <span class="list__album__name">Dilan Vũ</span>
+                                        </li>
+    
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2019/10/30/4/0/0/1/1572407810249_600.jpg" alt="" class="list__album__img">
+                                            </div>
+                                            <span class="list__album__name">Yuki Huy Nam</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2021/07/29/e/d/6/0/1627519632288_600.jpg" alt="" class="list__album__img">
+                                            </div>
+                                            <span class="list__album__name">H-Kray</span>
+                                        </li>
+                                        <li class="list__album__item">
+                                            <div class="album__img__wrapper">
+                                                <div class="list__album__blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/singer/avatar/2022/04/12/b/e/7/c/1649735066221_600.jpg" alt="" class="list__album__img">
+                                            </div>
+                                            <span class="list__album__name">Đào Ngọc Sang</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Box right -->
+                        <div class="col l-3">
+                            <div class="box--right">
+                                <div class="charts charts__music">
+                                    <div class="charts__heading cursor--pointer">
+                                        BXH Bài Hát
+                                    </div>
+        
+                                    <div class="charts__tab__select">
+                                        <span class="charts__select__item charts__select--active cursor--pointer" data-index="0">Việt Nam</span><span class="charts__select__item cursor--pointer" data-index="1">Âu Mỹ</span><span class="charts__select__item cursor--pointer" data-index="2">Hàn Quốc</span>
+                                    </div>
+        
+                                    <ul class="charts__list" data-index="0">
+                                        <li class="charts__item">
+                                            <div class="charts__item__img__wrapper">
+                                                <img src="https://avatar-ex-swe.nixcdn.com/song/2022/01/26/4/e/f/e/1643184497199.jpg" alt="" class="charts__item__img">
+                                                <span class="charts__item__order">1</span>
+                                            </div>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh</div>
+                                                <div class="charts__item__singer">ERIK</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order color--blue">2</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Đế Vương</div>
+                                                <div class="charts__item__singer">Đình Dũng</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">ACV</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order color--orange">3</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Hoa Tàn Tình Tan</div>
+                                                <div class="charts__item__singer">Giang Jolle</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order">4</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Có Em Đây</div>
+                                                <div class="charts__item__singer">Như Việt</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">Dunghoangpham</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">ACV</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order">5</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Là Do Em Xui Thôi</div>
+                                                <div class="charts__item__singer">Khói</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">Sofia</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">Châu Đăng Khoa</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order">6</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Có Hẹn Với Thanh Xuân</div>
+                                                <div class="charts__item__singer">MONSTAR</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order">7</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Thức Giấc</div>
+                                                <div class="charts__item__singer">Da LAB</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order">8</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Chạy Về Nơi Phía Anh</div>
+                                                <div class="charts__item__singer">Khắc Việt</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order">9</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Tệ Thật, Anh Nhớ Em</div>
+                                                <div class="charts__item__singer">Thanh Hưng</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <span class="charts__item__order">10</span>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Cưới Thôi</div>
+                                                <div class="charts__item__singer">Masew</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">Masiu</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">Bray</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">TAP</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+        
+                                <div class="charts charts__mv">
+                                    <div class="charts__heading cursor--pointer">
+                                        BXH MV
+                                    </div>
+        
+                                    <div class="charts__tab__select">
+                                        <span class="charts__select__item charts__select--active cursor--pointer">Việt Nam</span><span class="charts__select__item cursor--pointer">Âu Mỹ</span><span class="charts__select__item cursor--pointer">Hàn Quốc</span>
+                                    </div>
+        
+                                    <ul class="charts__list">
+                                        <li class="charts__item">
+                                            <div class="charts__item__info__wrapper cursor--pointer">
+                                                <div class="blur"></div>
+                                                <img src="./assets/img/chayvenoiphiaanh.jpg" alt="" class="charts__item__img" style="width: 100%; height: auto">
+                                                <span class="charts__item__order">1</span>
+                                                <a href="" class="list__album__play"></a>
+                                                <div class="charts__item__info">
+                                                    <div class="charts__item__name">Chạy Về Nơi Phía Anh</div>
+                                                    <div class="charts__item__singer">Khắc Việt</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <div class="charts__item__info__wrapper cursor--pointer">
+                                                <div class="blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/mv/2022/04/04/7/e/4/f/1649034549603.jpg" alt="" class="charts__item__img" style="width: 110px; height: auto">
+                                                <span class="charts__item__order color--blue">2</span>
+                                                <a href="" class="list__album__play">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/icon-48x48-play.png" alt="" style="width: 28px; height: 28px">
+                                                </a>
+                                            </div>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Lỡ Mai Này</div>
+                                                <div class="charts__item__singer">Bozitt</div>
+                                                <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem;">, </span>
+                                                <div class="charts__item__singer">LilGee Phạm</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <div class="charts__item__info__wrapper cursor--pointer">
+                                                <div class="blur"></div>
+                                                <img src="./assets/img/coemladu.jpg" alt="" class="charts__item__img" style="width: 110px; height: auto">
+                                                <span class="charts__item__order color--orange">3</span>
+                                                <a href="" class="list__album__play">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/icon-48x48-play.png" alt="" style="width: 28px; height: 28px">
+                                                </a>
+                                            </div>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Có Em Là Đủ</div>
+                                                <div class="charts__item__singer">Will</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <div class="charts__item__info__wrapper cursor--pointer">
+                                                <div class="blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/mv/2022/03/24/4/b/3/6/1648110115130.jpg" alt="" class="charts__item__img" style="width: 110px; height: auto">
+                                                <span class="charts__item__order">4</span>
+                                                <a href="" class="list__album__play">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/icon-48x48-play.png" alt="" style="width: 28px; height: 28px">
+                                                </a>
+                                            </div>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Người Thương Em Cả Đời Em Xua Đuổi</div>
+                                                <div class="charts__item__singer">Như Việt</div>
+                                            </div>
+                                        </li>
+                                        <li class="charts__item">
+                                            <div class="charts__item__info__wrapper cursor--pointer">
+                                                <div class="blur"></div>
+                                                <img src="https://avatar-ex-swe.nixcdn.com/mv/2022/04/01/a/c/f/d/1648801793780.jpg" alt="" class="charts__item__img" style="width: 110px; height: auto">
+                                                <span class="charts__item__order">5</span>
+                                                <a href="" class="list__album__play">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/icon-48x48-play.png" alt="" style="width: 28px; height: 28px">
+                                                </a>
+                                            </div>
+                                            <div class="charts__item__info">
+                                                <div class="charts__item__name">Dừng Làm Bạn</div>
+                                                <div class="charts__item__singer">Mr White</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+        
+                                <div class="discovery__playlist cursor--pointer">
+                                    <div class="discovery__playlist__heading">
+                                        Gợi ý dành cho bạn
+                                    </div>
+                                    <div class="discovery__playlist__text">Thưởng thức những ca khúc phù hợp nhất với bạn</div>
+        
+                                    <div class="btn__playlist">
+                                        <span class="btn__playlist__icon">
+                                            <i class="ti-control-play"></i>
+                                        </span>
+                                        <span class="btn__playlist__text">Nghe bài hát</span>
+                                    </div>
+                                </div>
+        
+                                <div class="theme__hot">
+                                    <h2 class="theme__heading">
+                                        Chủ đề Hot
+                                        <span class="list__album--arrow"></span>
+                                    </h2>
+                                    <ul class="theme__list">
+                                        <li class="theme__item cursor--pointer">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/06/18/9/5/f/7/1592468389855_org.jpg" alt="" class="theme__img">
+                                        </li>
+                                        <li class="theme__item cursor--pointer">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/08/13/f/d/9/1/1597291766331_org.jpg" alt="" class="theme__img">
+                                        </li>
+                                        <li class="theme__item cursor--pointer">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/06/22/9/7/b/e/1592810243009_org.jpg" alt="" class="theme__img">
+                                        </li>
+                                        <li class="theme__item cursor--pointer">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/09/10/6/a/9/b/1599734115030_org.jpg" alt="" class="theme__img">
+                                        </li>
+                                        <li class="theme__item cursor--pointer">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/topic/thumb/2020/09/03/4/5/9/8/1599120670684_org.jpg" alt="" class="theme__img">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top 100 -->
+            <div style="margin-top: 100px" class="l-0">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-9">
+                            <div class="breadCrumb">
+                                <!-- Đường dẫn -->
+                                <span class="hover--primary cursor--pointer breadCrumb__text">Nghe nhạc</span>
+                                > 
+                                <span class="hover--primary cursor--pointer breadCrumb__text breadCrumb__playlist">Playlist Nhạc Trẻ</span>
+                                > 
+                                <span class="hover--primary cursor--pointer breadCrumb__text">V.A</span>
+                            </div>
+
+                            <div class="name__title">Top 100 Nhạc Trẻ Hay Nhất</div>
+                            <span style="font-size: 2.2rem; color: #333; margin: 0 4px;">-</span>
+                            <div class="name__singer hover--primary cursor--pointer">V.A</div>
+
+                            <div class="box__playing">
+                                <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/05/04/3/b/6/d/1620100988545.jpg" alt="" class="box__playing__img">
+
+                                <div class="box__playing__process__wrapper cursor--pointer">
+                                    <div class="box__playing__process">
+                                        <div class="box__playing__curr__process"></div>
+                                    </div>
+                                </div>
+
+                                <div class="box__playing__action">
+                                    <div class="box__playing__left">
+                                        <div class="box__playing__prev cursor--pointer" style="background-size: 10px 12px;"></div>
+                                        <div class="box__playing__play cursor--pointer" style="background-size: 15px 20px;"></div>
+                                        <div class="box__playing__next cursor--pointer" style="background-size: 10px 12px;"></div>
+
+                                        <div class="box__playing__time">
+                                            <div class="box__playing__currentTime">01:20</div>
+                                            <div class="box__playing__totalTime">/ 04:22</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="box__playing__right">
+                                        <div class="box__autoplay__wrapper">
+                                            <label for="box__autoplay" class="box__autoplay cursor--pointer">
+                                                <input type="checkbox" name="" id="box__autoplay" hidden>
+                                                <span class="box__autoplay__check"></span>
+                                            </label>
+                                        </div>
+                                        <div class="box__random__play" style="background-size: 22px 20px;"></div>
+                                        <div class="box__repeat__play" style="background-size: 16px 14px;"></div>
+
+                                        <div class="box__switch__quality__wrapper cursor--pointer">
+                                            128kbps
+                                            <ul class="box__switch__quality__list">
+                                                <div class="box__switch__quality__title">Chất lượng</div>
+                                                <li class="box__switch__quality__item">320kbps</li>
+                                                <li class="box__switch__quality__item">128kbps</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="box__volume__control cursor--pointer" style="background-size: 34px 21px;">
+                                            <div class="box__volume__version ver-3" style="background-size: 20px"></div>
+                                            <div class="box__volume__process__wrapper">
+                                                <div class="box__volume__process">
+                                                    <div class="box__curr__volume"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            
+                            <ul class="list__song__album">
+                                <li class="list__song__item">
+                                    <div class="list__song__info">
+                                        <span class="list__song__order">1.</span>
+                                        <div class="list__song__name hover--primary cursor--pointer">Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh</div>
+                                        <span style="color: rgba(0, 0, 0, 0.5); font-size: 1.2rem; margin: 0 4px;">-</span>
+                                        <div class="list__song__singer hover--primary cursor--pointer">ERIK</div>
+                                    </div>
+
+                                    <div class="list__song__action">
+                                        <div class="list__song__play cursor--pointer"></div>
+                                        <div class="list__song__addAlbum cursor--pointer"></div>
+                                        <div class="list__song__download cursor--pointer"></div>
+                                        <div class="list__song__playNewTab cursor--pointer"></div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="box__menu__player">
+                                <div class="box__user__upload">
+                                    <img src="https://avatar-nct.nixcdn.com/avatar/2011/08/23/nhaccuatui.jpg" alt="" class="box__user__upload__img">
+                                    <div class="box__user__upload__info">
+                                        <div class="box__user__upload__from">Tạo bởi: </div> 
+                                        <div class="box__user__upload__name">nhaccuatui</div>
+                                    </div>
+                                </div>
+
+                                <ul class="box__menu__list">
+                                    <li class="box__menu__item hover--primary cursor--pointer">
+                                        <p style="background: url(https://stc-id.nixcdn.com/v11/images/ic_heart.png) no-repeat; width: 20px; height: 20px; margin-right: 4px"></p>
+                                        Thêm vào
+                                    </li>
+                                    <li class="box__menu__item hover--primary cursor--pointer">
+                                        <p style="background: url('https://stc-id.nixcdn.com/v11/images/ic_download.png') no-repeat; width: 20px; height: 20px; margin-right: 4px"></p>
+                                        Tải playlist
+                                    </li>
+                                    <li class="box__menu__item hover--primary cursor--pointer">
+                                        <p style="background: url(https://stc-id.nixcdn.com/v11/images/ic_share.png) no-repeat; height: 20px; width: 24px; margin-right: 4px"></p>
+                                        Chia sẻ
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="box__menu__tag">
+                                <div style="display: flex; align-items: center">
+                                    <div class="box__menu__tag__title">
+                                        Tags:
+                                    </div>
+                                    <ul class="box__tag__list">
+                                        <li class="box__tag__item cursor--pointer">Nhạc Trẻ</li>
+                                        <li class="box__tag__item cursor--pointer">Du Lịch</li>
+                                        <li class="box__tag__item cursor--pointer">Mua Sắm - Shopping</li>
+                                        <li class="box__tag__item cursor--pointer">Đi Dạo - Chạy Bộ</li>
+                                        <li class="box__tag__item cursor--pointer">Bar - Club</li>
+                                        <li class="box__tag__item cursor--pointer">Top 100</li>
+                                    </ul>
+                                </div>
+                                <div class="box__menu__tag__more">
+                                    <div class="box__menu__tag__more__icon"></div>
+                                    <h4 style="font-weight: 500; margin: 0" class="cursor--pointer">Xem thêm</h4>
+                                </div>
+                            </div>
+
+                            <div class="box__lyric__wrapper">
+                                <div class="box__lyric__title">
+                                    <h3 class="box__lyric__name__wrapper">
+                                        Lời bài hát:
+                                        <span class="box__lyric__name">Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh</span>
+                                    </h3>
+    
+                                    <div class="box__lyric__musician__wrapper">
+                                        Nhạc sĩ:
+                                        <span class="box__lyric__musician" style="margin-left: 4px">V.A</span>
+                                    </div>
+                                    <div class="box__lyric__userUpload__wrapper">
+                                        Lời đăng bởi:
+                                        <span class="box__lyric__userUpload cursor--pointer" style="margin-left: 4px; color: var(--primary-color);">V.A</span>
+                                    </div>
+                                </div>
+
+                                <div class="box__lyric">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col l-3">
+                            <div class="box_prospect_singer">
+                                <div class="list__album__heading">
+                                    <h2>
+                                        Top 100 Châu Á
+                                        <span class="list__album--arrow"></span>
+                                    </h2>
+                                </div>
+
+                                <div class="list_singer_music">
+                                    <ul>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2020/09/16/e/1/f/f/1600239362951.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Nhạc Hàn Hay Nhất</span>
+                                        </li>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2020/09/16/e/1/f/f/1600250531723.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Nhạc Hoa Hay Nhất</span>
+                                        </li>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/04/08/5/5/a/6/1617867524987.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Nhạc Nhật Hay Nhất</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="box_prospect_singer">
+                                <div class="list__album__heading">
+                                    <h2>
+                                        Top 100 Không Lời
+                                        <span class="list__album--arrow"></span>
+                                    </h2>
+                                </div>
+
+                                <div class="list_singer_music">
+                                    <ul>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2020/09/16/e/1/f/f/1600250876973.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Nhạc Không Lời Hay Nhất</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="box_prospect_singer">
+                                <div class="list__album__heading">
+                                    <h2>
+                                        Top 100 Âu Mỹ
+                                        <span class="list__album--arrow"></span>
+                                    </h2>
+                                </div>
+
+                                <div class="list_singer_music">
+                                    <ul>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/11/02/b/4/7/0/1635818384011.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Pop USUK Hay Nhất</span>
+                                        </li>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2020/09/16/e/1/f/f/1600250721042.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Nhạc Country Hay Nhất</span>
+                                        </li>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/05/26/b/e/2/9/1622014540231.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Nhạc Latin Hay Nhất</span>
+                                        </li>
+                                        <li class="list__singer__item">
+                                            <img src="https://avatar-ex-swe.nixcdn.com/playlist/2020/09/16/e/1/f/f/1600239245257.jpg" alt="" class="cursor--pointer">
+                                            <span class="cursor--pointer hover--primary">Top 100 Electronica/Dance Hay Nhất</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="cooperation__wrapper">
+                <div class="footer__cooperation">
+                    <h2 class="cooperation__heading">Liên kết và hợp tác</h2>
+                    <div class="cooperation__list__wrapper">
+                        <i class="ti-angle-left footer__arrow arrow--left cursor--pointer"></i>
+                        <i class="ti-angle-right footer__arrow arrow--right cursor--pointer"></i>
+                        <div class="cooperation__list__track">
+                            <div class="cooperation__item cursor--pointer" data-index="0">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/2-new.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="1">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/17.png" alt="" class="cooperation__item__img">
+                            </div>
+
+                            <div class="cooperation__item cursor--pointer" data-index="2">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/19.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="3">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/12.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="4">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/9.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="5">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/15.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="6">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/3-new.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="7">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/20.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="8">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/14.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="9">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/16.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="10">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/8.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="11">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/13.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="12">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/11.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="13">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/7-new.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="14">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/monstercat.png" alt="" class="cooperation__item__img" style="padding: 0 2px">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="15">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/1-new.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="16">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/2-new.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="17">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/17.png" alt="" class="cooperation__item__img">
+                            </div>
+
+                            <div class="cooperation__item cursor--pointer" data-index="18">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/19.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="19">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/12.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="20">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/9.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="21">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/15.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="22">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/3-new.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="23">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/20.png" alt="" class="cooperation__item__img">
+                            </div>
+                            <div class="cooperation__item cursor--pointer" data-index="24">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/14.png" alt="" class="cooperation__item__img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid wide">
+                <div class="footer__container">
+                    <div class="footer__nav">
+                        <div class="row">
+                            <div class="col l-4">
+                                <div class="nav__list__wrapper">
+                                    <div class="nav__list__heading">Hỗ trợ</div>
+                                    <ul class="nav__list">
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Trợ giúp
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Chính sách bảo mật
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Sơ đồ
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Chính sách SHTT
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            NCCI
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Thỏa thuận sử dụng
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Liên hệ quảng cáo
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col l-4">
+                                <div class="nav__list__wrapper">
+                                    <div class="nav__list__heading">Sản phẩm khác</div>
+                                    <ul class="nav__list">
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Mobile App
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Dịch vụ 3G
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Mobile Web
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            NCT Corp
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Smart TV
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Tuyển dụng
+                                        </li>
+                                        <li class="nav__item hover--primary cursor--pointer">
+                                            <span class="list__album--arrow"></span>
+                                            Destop
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col l-4">
+                                <div class="footer__contact__wrapper">
+                                    <div class="footer__topKeyWord">
+                                        <div class="footer__contact__header">Top từ khóa</div>
+                                        <span class="footer__topKeyWord__text cursor--pointer">Don't Break My Heart</span>
+                                        <span style="font-size: 1.2rem; color: var(--primary-color);">, </span>
+                                        <span class="footer__topKeyWord__text cursor--pointer">Ngày Đầu Tiên</span>
+                                        <span style="font-size: 1.2rem; color: var(--primary-color);">, </span>
+                                        <span class="footer__topKeyWord__text cursor--pointer">See Tình</span>
+                                        <span style="font-size: 1.2rem; color: var(--primary-color);">, </span>
+                                        <span class="footer__topKeyWord__text cursor--pointer">Yêu Đương Khó Quá Thì Chạy Về Khóc Với Anh</span>
+                                        <span style="font-size: 1.2rem; color: var(--primary-color);">, </span>
+                                        <span class="footer__topKeyWord__text cursor--pointer">Light Switch</span>
+                                    </div>
+        
+                                    <div class="footer__contact">
+                                        <div class="footer__contact__header">Kết nối với chúng tôi</div>
+                                        <ul class="contact__list__app">
+                                            <li class="contact__item__app">
+                                                <a href="https://www.facebook.com/NhacCuaTuiOfficial" class="contact__item__link">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/footer/t_ic_facebook.png" alt="" class="contact__item__app__img">
+                                                </a>
+                                            </li>
+                                            <li class="contact__item__app">
+                                                <a href="https://www.instagram.com/Nhaccuatui/" class="contact__item__link">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/footer/t_ic_instagram.png" alt="" class="contact__item__app__img">
+                                                </a>
+                                            </li>
+                                            <li class="contact__item__app">
+                                                <a href="https://www.tiktok.com/@nhaccuatui/" class="contact__item__link">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/footer/t_ic_tiktok.png" alt="" class="contact__item__app__img">
+                                                </a>
+                                            </li>
+                                            <li class="contact__item__app">
+                                                <a href="https://zalo.me/4060780154085925782" class="contact__item__link">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/footer/t_ic_zalo.png" alt="" class="contact__item__app__img">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="contact__list__download">
+                                            <li class="contact__item__download">
+                                                <a href="https://play.google.com/store/apps/details?id=ht.nct&hl=vi" class="contact__item__link">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/footer/t_google_play.png" alt="" class="contact__item__download__img">
+                                                </a>
+                                            </li>
+                                            <li class="contact__item__download">
+                                                <a href="https://apps.apple.com/vn/app/nhaccuatui-find-mp3-music/id1210763463" class="contact__item__link">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/footer/t_app_store.png" alt="" class="contact__item__download__img">
+                                                </a>
+                                            </li>
+                                            <li class="contact__item__download">
+                                                <a href="http://cdc.hispace.hicloud.com/000000fC" class="contact__item__link">
+                                                    <img src="https://stc-id.nixcdn.com/v11/images/footer/t_appgallery.png" alt="" class="contact__item__download__img">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="info__company__wrapper">
+                        <div class="info__company">
+                            <div class="info__company__logo">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/t_logo_company.png" alt="" class="info__company__img">
+                            </div>
+
+                            <div class="info__company__text">
+                                <div class="info__company__header">
+                                    Công ty cổ phần N C T
+                                </div>
+                                <ul class="info__company__list">
+                                    <li class="info__company__item">Chủ sở hữu website: 
+                                        <span class="company__owner">Ông Nhan Thế Luân</span>
+                                    </li>
+                                    <li class="info__company__item">Giấy phép MXH số 499/GP-BTTTT do Bộ Thông Tin và Truyền thông cấp ngày 28/09/2015.</li>
+                                    <li class="info__company__item">Giấy Chứng nhận Đăng ký Kinh doanh số 0305535715 do Sở kế hoạch và Đầu tư thành phố Hồ Chí Minh cấp ngày 01/03/2008.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="permission">
+                            <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=44267" class="permission__link">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/t_bo_cong_thuong.png" alt="" class="permission__img">
+                            </a>
+                            <a href="//www.dmca.com/Protection/Status.aspx?ID=6aa0e355-51a6-4291-a835-45d4eb2d0ce1" class="permission__link">
+                                <img src="https://stc-id.nixcdn.com/v11/images/footer/t_dmca.png" alt="" class="permission__img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__no__copyright">
+                <div class="grid wide">
+                    <div class="footer__wrapper">
+                        <div class="footer__address__wrapper">
+                            <a href="https://goo.gl/maps/QLUWVMBJvYZuY7nx7" class="footer__address__link hover--primary">
+                                <i class="ti-location-pin"></i>
+                                <div class="footer__address">Tầng 19, Tòa nhà The 678 Tower, Số 67 đường Hoàng Văn Thái, phường Tân Phú, quận 7, TP HCM.</div>
+                            </a>
+                            <a href="mailto:support@nct.vn" class="footer__address__link hover--primary">
+                                <i class="ti-email"></i>
+                                <div class="footer__address">support@nct.vn</div>
+                            </a>
+                            <a href="tel:02838687979" class="footer__address__link hover--primary">
+                                <img src="./assets/img/phone-24.png" alt="">
+                                <div class="footer__address">(028) 3868 7979</div>
+                            </a>
+                        </div>
+                        <div class="footer__no__copyright__text">
+                            © NCT Corp. All rights reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav__control">
+            <div class="goToPage cursor--pointer"></div>
+            <span class="goToPage__text">Trở lên đầu trang</span>
+
+            <div class="advertise__wrapper">
+                <label for="advertise__checkbox" style="display: inherit">
+                    <input type="checkbox" name="" id="advertise__checkbox">
+                    <span class="check"></span>
+                </label>
+                <div class="advertise__text">
+                    <div class="advertise advertise--enable">Bật quảng cáo</div>
+                    <div class="advertise advertise--disable">Tắt quảng cáo</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__nct__wrapper">
+            <div class="blur"></div>
+
+            <div class="form__nct form__login">
+                <div class="form__header">
+                    <h2 class="form__heading">Đăng nhập</h2>
+                    <div class="form__close cursor--pointer">
+                        <i class="ti-close form__close__icon"></i>
+                    </div>
+                </div>
+    
+                <div class="form__container">
+                    <div class="form__box--left">
+                        <div class="required__text">
+                            Những thông tin có đánh dấu(<span class="required"></span>) là bắt buộc nhập.
+                        </div>
+                        <!-- thêm thẻ class required là dấu * -->
+                        <form action="">
+                            <div class="form__group">
+                                <label for="user-name" class="form__label cursor--pointer">
+                                    Tên đăng nhập
+                                    <span class="required"></span>
+                                </label>
+                                <input type="text" class="form__control" id="user-name">
+                            </div>
+                            <div class="form__group">
+                                <label for="password" class="form__label cursor--pointer">
+                                    Mật khẩu
+                                    <span class="required"></span>
+                                </label>
+                                <input type="text" class="form__control" id="password">
+                            </div>
+                            <div class="form__options">
+                                <div class="form__input--checkbox">
+                                    <input type="checkbox" name="remember-password" id="remember-password" class="cursor--pointer" checked>
+                                    <label for="remember-password" class="form__input__text cursor--pointer">
+                                        Nhớ mật khẩu
+                                    </label>
+                                </div>
+                                <a class="form__forgot__password cursor--pointer">Quên mật khẩu?</a>
+                            </div>
+                            
+                            <div class="form__error">
+                                <i class="ti-close form__error__icon"></i>
+                                Sai tài khoản hoặc mật khẩu
+                            </div>
+
+                            <button class="form__submit cursor--pointer">Đăng nhập</button>
+                        </form>
+                    </div>
+                    <div class="form__box--right">
+                        <div class="form__user">
+                            <div class="form__user__text">Bạn chưa có tài khoản NCT ID</div>
+                            <buttom class="form__user__btn cursor--pointer">Đăng ký ngay</buttom>
+                        </div>
+    
+                        <div class="form__line">
+                            <div class="form__line__text">Hoặc</div>
+                        </div>
+    
+                        <div class="form__more__login">
+                            <div class="form__login__item cursor--pointer">
+                                <i class="form__login__icon ti-facebook form__icon__fb"></i>
+                                <div class="form__item__text">Đăng nhập qua Facebook</div>
+                            </div>
+                            <div class="form__login__item cursor--pointer">
+                                <i class="form__login__icon ti-google form__icon__gg"></i>
+                                <div class="form__item__text">Đăng nhập qua Google +</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/play_music.js"></script>
+    <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/Validator.js"></script>
+
+    <script>
+        //Slider
+        Slider({
+            sliderTrack: '.slider__track',
+            sliderItem: '.slider__item',
+            arrowPrev: '.slider--prev',
+            arrowNext: '.slider--next',
+            sliderDots: '.slider__dot__item',
+            centerMode: true,
+            autoPlay: true,
+            isDot: true,
+            time: 3000,
+            sliderLength: 5
+        });
+
+        //Footer cooperation
+        Slider({
+            sliderTrack: '.cooperation__list__track',
+            sliderItem: '.cooperation__item',
+            arrowPrev: '.arrow--left',
+            arrowNext: '.arrow--right',
+            centerMode: false,
+            autoPlay: true,
+            isDot: false,
+            time: 2000,
+            sliderLength: 16
+        });
+
+        // Form Login
+        Validator({
+            form: '.form__login',
+            formSelector: '.form__group',
+            errorSelector: '.form__error',
+            rule: [
+                Validator.isSubmit('#user-name'),
+                Validator.isSubmit('#password')
+            ],
+            onSubmit: function(data) {
+              console.log(data);
+            }
+        });
+
+        // TransferTabSelect Music
+        handleTransferTabSelect('.charts__music', 0);
+        handleTransferTabSelect('.charts__mv', 1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+11/4 bắt đầu làm
+
+Note: cách chia grid
+    grid wide
+        row
+            col l-4 m-12 c-12
+                row => col ...
+
+1. Viết html, css
+
+    1.1. Link reset css
+    1.2. Link font Poppin => Gần giống
+    1.3. Link các file css
+    
+    1.4. header (width: 100% <=> 1200px)
+        1.4.1. header-sub-menu
+        1.4.2. header-search + header-register + header-login + header-icon
+
+    1.5. slider (width: 100% <=> 1200px) (slick slider center mode) 4 - 5 - 1 - 2 - 3 - 4 - 5 - 1 - 2
+        1.5.1. slider
+        1.5.2. slider prev , slider next
+        1.5.3. slider dots (mấy cái dấu chấm)
+        1.5.4. slider main
+        1.5.5. slider item (ảnh)...
+
+        
+    1.6. box-wrapper >> box-left & box-right ()
+        1.6.1. box left
+            1.6.1.1. list album wrapper >> heading >> album list >> album item
+
+        1.6.2. box right
+            1.6.2.2. charts__music + tab__select (VN, Âu Mỹ, HQ) + charts__list > charts__item
+
+    1.7. Footer
+        1.7.1. cooperation__list
+        1.7.2. nav__list + topkeyword + contact
+        1.7.3. info__company + permission (sự cho phép)
+        1.7.4. No copy right
+
+    1.8. goTopPage scrollTop = document.documentElement.scrollTop || window.scrollY
+		background #2daaed url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) 5px -1894px no-repeat;
+		41 x 40
+    1.9. input:checkbox + advertise
+		font-size: 1.4rem
+		#fff
+		transform rotate
+		130 x 30
+
+
+https://stc-id.nixcdn.com/v11/images/icon_status.gif
+
+Volume
+    https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/v1.png
+    https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/v2.png
+    https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/v3.png
+
+Code dòng 553 file main.js
