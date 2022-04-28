@@ -1785,7 +1785,7 @@
     position: relative;
     bottom: -4px;
     background-color: #5e5e5e;
-    transition: bottom 0.2s linear;
+    transition: bottom 0.1s linear;
 }
 
 .box__playing__process:hover {
@@ -2112,6 +2112,7 @@
     border: 1px solid #ececec;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    scroll-behavior: smooth;
 }
 
 .list__song__item {
@@ -2144,11 +2145,23 @@
 .list__song__name {
     font-size: 1.4rem;
     color: rgba(0, 0, 0, 0.88);
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .list__song__singer {
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.5);
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .list__song__action {

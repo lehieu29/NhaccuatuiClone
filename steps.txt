@@ -47,11 +47,4 @@ Note: cách chia grid
 		130 x 30
 
 
-https://stc-id.nixcdn.com/v11/images/icon_status.gif
-
-Volume
-    https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/v1.png
-    https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/v2.png
-    https://stc-id.nixcdn.com/v11/html5/nct-player-mp3/images/v3.png
-
-Code dòng 553 file main.js
+Chưa fix được bug pause xong ấn vào bài khác

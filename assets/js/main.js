@@ -493,43 +493,47 @@ function handleTransferTop100(data) {
     // Bắt sự kiện click top 100
     [...top100s].forEach((genre, index) => {
         genre.onclick = () => {
-            switch (index) {
+            let indexCategory = index; //Category: Việt Nam, Âu Mỹ, Châu Á, Không Lời
+            let indexGenre = 0; // Default = 0 //Genre: Nhạc Trẻ, Trữ Tình, Tiền Chiến, ...
+
+            switch (indexCategory) {
                 case 0: {
-                    boxLeft.innerHTML = renderMusic(data.songs.top100_VN, 0);
-                    renderPagePlayMusic(data.songs.top100_VN[0]);
-                    handleTransferGenre(data.songs.top100_VN);
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_VN, indexGenre);
+                    handleTransferGenre(data.songs.top100_VN, indexCategory);
                     break;
                 }
                 case 1: {
-                    boxLeft.innerHTML = renderMusic(data.songs.top100_AM, 0);
-                    renderPagePlayMusic(data.songs.top100_AM[0]);
-                    handleTransferGenre(data.songs.top100_AM);
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_AM, indexGenre);
+                    handleTransferGenre(data.songs.top100_AM, indexCategory);
                     break;
                 }
                 case 2: {
-                    boxLeft.innerHTML = renderMusic(data.songs.top100_CA, 0);
-                    renderPagePlayMusic(data.songs.top100_CA[0]);
-                    handleTransferGenre(data.songs.top100_CA);
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_CA, indexGenre);
+                    handleTransferGenre(data.songs.top100_CA, indexCategory);
                     break;
                 }
                 case 3: {
-                    boxLeft.innerHTML = renderMusic(data.songs.top100_KL, 0);
-                    renderPagePlayMusic(data.songs.top100_KL[0]);
-                    handleTransferGenre(data.songs.top100_KL);
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_KL, indexGenre);
+                    handleTransferGenre(data.songs.top100_KL, indexCategory);
                     break;
                 }
             }
+            
+            handleEventToRenderPagePlayMusic(data, indexCategory, indexGenre);
 
             // Ẩn slider
             slider.style.display = 'none';
 
             // Render Box Right
-            renderBoxRight(index);
+            renderBoxRight(indexGenre);
+
+            // Xử lý khi click vào các element box right
+            handleEventsBoxRight(data);
         }
     })
 }
 
-function handleTransferGenre(data) {
+function handleTransferGenre(data, indexCategory) {
     const categoryList = $$('.top100__tab__item');
     const chartsList100 = $('.charts__list100');
     const chartsList100Category = $('.charts__list100__category');
@@ -542,34 +546,62 @@ function handleTransferGenre(data) {
 
             chartsList100.innerHTML = renderChartsList(data[index].songs);
 
-            renderPagePlayMusic(data[index]) // Top 100
+            handleEventToRenderPagePlayMusic(data[index], indexCategory, index) // Top 100
         }
     })
 }
 
-function renderPagePlayMusic(data) {
-    // data top 100
+function handleEventToRenderPagePlayMusic(data, indexCategory, indexGenre) {
+    // data to
 
     const musicList = $$('.charts__list100__item');
 
     [...musicList].forEach((musicItem, index) => {
         musicItem.onclick = () => {
-            boxLeft.innerHTML = renderPlayMusic(data);
+            //indexCategory: Việt Nam, Âu Mỹ, ...
+            //index (indexGenre): Nhạc Trẻ, Trữ Tình, ...
 
-            handlePlayMusic(data.songs, index);
-            //listItemPlay[index].scrollTop = 100;
+            switch (indexCategory) {
+                case 0: {
+                    boxLeft.innerHTML = renderPlayMusic(data.songs.top100_VN[indexGenre], indexCategory, indexGenre);
+                    handlePlayMusic(data.songs.top100_VN[indexGenre].songs, index);
+                    break;
+                }
+                case 1: {
+                    boxLeft.innerHTML = renderPlayMusic(data.songs.top100_AM[indexGenre], indexCategory, indexGenre);
+                    handlePlayMusic(data.songs.top100_AM[indexGenre].songs, index);
+                    break;
+                }
+                case 2: {
+                    boxLeft.innerHTML = renderPlayMusic(data.songs.top100_CA[indexGenre], indexCategory, indexGenre);
+                    handlePlayMusic(data.songs.top100_CA[indexGenre].songs, index);
+                    break;
+                }
+                case 3: {
+                    boxLeft.innerHTML = renderPlayMusic(data.songs.top100_KL[indexGenre], indexCategory, indexGenre);
+                    handlePlayMusic(data.songs.top100_KL[indexGenre].songs, index);
+                    break;
+                }
+            }
 
-            //goToPage.click();
+            renderBoxRightPagePlayMusic(indexCategory, indexGenre);
+
+            handleEventsBoxRight(data);
+
+            goToPage.click();
         }
     })
 }
 
 function renderBoxRight(number) {
-    function list__singer__music(list) {
+    //number là indexCategory đã render ở box left nên k render ở box right
+
+    function list__singer__music(list, indexCategory) {
         return list.map((item, index) => {
+            // index là indexGenre
             if (index != 0) {
                 return `
-                    <li class="list__singer__item">
+                    <li class="list__singer__item" data-category="${indexCategory}" data-genre="${index - 1}">
                         <img src="${item.image}" alt="" class="cursor--pointer">
                         <span class="cursor--pointer hover--primary">${item.text}</span>
                     </li>
@@ -581,8 +613,8 @@ function renderBoxRight(number) {
 
     boxRight.innerHTML = boxRightArray.map((list, index) => {
         if (index != number) {
-
-            let listSingerMusic = list__singer__music(list);
+            // index là indexCategory
+            let listSingerMusic = list__singer__music(list, index);
 
             return `
                 <div class="box_prospect_singer">
@@ -604,10 +636,100 @@ function renderBoxRight(number) {
     }).join('');
 }
 
+function handleEventsBoxRight(data) {
+    //data là to luôn
+    // Box right
+    const listSingerItems = $$('.box_prospect_singer .list__singer__item');
+
+    [...listSingerItems].forEach((item) => {
+        // item là các thẻ li box right
+        item.onclick = () => {
+            let indexCategory = parseInt(item.dataset.category); //Category: Việt Nam, Âu Mỹ, Châu Á, Không Lời
+            let indexGenre = parseInt(item.dataset.genre); //Genre: Nhạc Trẻ, Trữ Tình, Tiền Chiến, ...
+
+            handleEventToRenderPagePlayMusic(data, indexCategory, indexGenre);
+
+            switch (indexCategory) {
+                case 0: {
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_VN, indexGenre);
+                    handleTransferGenre(data.songs.top100_VN, indexCategory);
+                    break;
+                }
+                case 1: {
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_AM, indexGenre);
+                    handleTransferGenre(data.songs.top100_AM, indexCategory);
+                    break;
+                }
+                case 2: {
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_CA, indexGenre);
+                    handleTransferGenre(data.songs.top100_CA, indexCategory);
+                    break;
+                }
+                case 3: {
+                    boxLeft.innerHTML = renderMusic(data.songs.top100_KL, indexGenre);
+                    handleTransferGenre(data.songs.top100_KL, indexCategory);
+                    break;
+                }
+            }
+
+            // Render lại Box Right
+            renderBoxRight(indexCategory);
+
+            // Xử lý khi click vào các element box right
+            handleEventsBoxRight(data);
+
+            goToPage.click();
+        }
+    })
+}
+
+function renderBoxRightPagePlayMusic(indexCategoryHad, indexGenreHad) {
+    // indexCategory đã có :))
+    function list__singer__music(list, indexCategory) {
+        return list.map((item, index) => {
+            // index là indexGenre
+            if (indexCategory == indexCategoryHad && (index - 1) == indexGenreHad) return;
+
+            if (index != 0) {
+                return `
+                    <li class="list__singer__item" data-category="${indexCategory}" data-genre="${index - 1}">
+                        <img src="${item.image}" alt="" class="cursor--pointer">
+                        <span class="cursor--pointer hover--primary">${item.text}</span>
+                    </li>
+                `
+            }
+
+        }).join('');
+    }
+
+    boxRight.innerHTML = boxRightArray.map((list, index) => {
+        // index là indexCategory
+        let listSingerMusic = list__singer__music(list, index);
+
+        return `
+            <div class="box_prospect_singer">
+                <div class="list__album__heading">
+                    <h2>
+                        Top 100 ${list[0]}
+                        <span class="list__album--arrow"></span>
+                    </h2>
+                </div>
+
+                <div class="list_singer_music">
+                    <ul>
+                        ${listSingerMusic}
+                    </ul>
+                </div>
+            </div>
+        `
+    }).join('');
+}
+
 function renderMusic(data, index) {
     //data = data.songs.top100...
 
-    let categoryList = renderCategoryMusic(data);
+    //index này là indexGenre: Nhạc Trẻ, Trữ Tình, Tiền Chiến, Remix, ...
+    let categoryList = renderCategoryMusic(data, index);
 
     let chartsList = renderChartsList(data[index].songs);
 
@@ -656,10 +778,10 @@ function renderMusic(data, index) {
     `
 }
 
-function renderCategoryMusic(data) {
+function renderCategoryMusic(data, indexCategory) {
     // data = data.songs.top100...
     return data.map((value, index) => {
-        if (index == 0) {
+        if (index == indexCategory) {
             return `<li class="top100__tab__item top100__tab__item--active cursor--pointer">${value.name}</li>`
         }
 

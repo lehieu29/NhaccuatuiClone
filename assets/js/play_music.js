@@ -4,7 +4,7 @@
 //     
 // }
 
-function renderPlayMusic(data) {
+function renderPlayMusic(data, indexCategory, indexGenre) {
     //top100...
     let listMusic = renderListMusic(data.songs);
 
@@ -23,7 +23,7 @@ function renderPlayMusic(data) {
 
     <div class="box__playing">
         <audio class="play__music"></audio>
-        <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/05/04/3/b/6/d/1620100988545.jpg" alt="" class="box__playing__img">
+        <img src="${boxRightArray[indexCategory][indexGenre + 1].image}" alt="" class="box__playing__img">
 
         <div class="box__playing__process__wrapper cursor--pointer">
             <div class="box__playing__process">
@@ -192,6 +192,8 @@ function handlePlayMusic(data, index) {
         isPlaying = true;
         audioPlayMusic.play();
 
+
+
         // Load config
         loadConfig();
 
@@ -252,7 +254,15 @@ function handlePlayMusic(data, index) {
 
             loadCurrentSong();
 
-            audioPlayMusic.play();
+            console.log(currentIndex);
+
+            if (!isPlaying) {
+                // Nếu isPlaying = false
+                playPauseBtn.click();
+            } else {
+                audioPlayMusic.play();
+                isPlaying = true;
+            }
         }
 
         //Xử lý khi ấn btn prev
@@ -266,7 +276,13 @@ function handlePlayMusic(data, index) {
 
             loadCurrentSong();
 
-            audioPlayMusic.play();
+            if (!isPlaying) {
+                // Nếu isPlaying = false
+                playPauseBtn.click();
+            } else {
+                audioPlayMusic.play();
+                isPlaying = true;
+            }
         }
 
         // Xử lý khi ấn btn random
@@ -320,12 +336,6 @@ function handlePlayMusic(data, index) {
             changeWidthVolume();
         }
 
-        volumeBtnPlay.children[1].onclick = (e) => {
-            // e.stopPropagation();
-            // e.preventDefault();
-            // e.stopImmediatePropagation();
-        }
-
         // Xử lý khi next bài hát
         function nextSong() {
             if (!isRepeat) {
@@ -360,7 +370,7 @@ function handlePlayMusic(data, index) {
         function randomSong() {
             playedPlaylist.push(currentIndex);
 
-            const newIndex = Math.floor(Math.random() * data.length); // Random từ 0 -> 99 
+            let newIndex = Math.floor(Math.random() * data.length); // Random từ 0 -> 99 
 
             // Nếu mảng đã đầy thì reset thành mảng trống
             if (playedPlaylist.length == data.length) {
@@ -430,7 +440,24 @@ function handlePlayMusic(data, index) {
 
             currentVolume = volumeHeight / boxVolumeProcess.offsetHeight;
 
+            // Nếu currentVolume < 0 thì gán = 0
+            if (currentVolume < 0) currentVolume = 0;
+
             setConfig("currentVolume", currentVolume);
+
+            if (currentVolume != 0) {
+                if (volumeBtnPlay.matches('.mute')) {
+                    volumeBtnPlay.classList.remove('mute');
+                }
+            }
+
+            if (currentVolume == 0) {
+                if (!volumeBtnPlay.matches('.mute')) {
+                    volumeBtnPlay.classList.add('mute');
+                }
+            }
+
+            //Set volume cho audio ở trong function renderVersion
 
             renderVersion();
 
@@ -461,21 +488,21 @@ function handlePlayMusic(data, index) {
 
     // Xóa order thêm ảnh gif
     function activeGifActive() {
+        const listSongAlbum = $('.list__song__album');
         const listItemPlay = $$('.list__song__item');
 
         if ($('.list__song__item.list__song__item--active')) {
             $('.list__song__item.list__song__item--active').classList.remove('list__song__item--active');
         }
-
         listItemPlay[currentIndex].classList.add('list__song__item--active');
+
+        listSongAlbum.scrollTop = listItemPlay[currentIndex].offsetHeight * currentIndex;
     }
 
     function changeLyricSong() {
         const boxLyricName = $('.box__lyric__name');
 
         boxLyricName.textContent = data[currentIndex].title;
-
-
     }
 
     function resetTime() {
@@ -519,7 +546,7 @@ function handlePlayMusic(data, index) {
         const boxVolumeProcess = $('.box__volume__process__wrapper');
         const boxCurrVolume = $('.box__curr__volume');
 
-        boxVolumeProcess.style.display = 'block';
+        boxVolumeProcess.style.display = 'block'; // Để lấy được height xong ẩn đi
 
         const volumeHeight = currentVolume * boxVolumeProcess.offsetHeight;
 
