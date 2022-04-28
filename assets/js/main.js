@@ -499,27 +499,24 @@ function handleTransferTop100(data) {
             switch (indexCategory) {
                 case 0: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_VN, indexGenre);
-                    handleTransferGenre(data.songs.top100_VN, indexCategory);
                     break;
                 }
                 case 1: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_AM, indexGenre);
-                    handleTransferGenre(data.songs.top100_AM, indexCategory);
                     break;
                 }
                 case 2: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_CA, indexGenre);
-                    handleTransferGenre(data.songs.top100_CA, indexCategory);
                     break;
                 }
                 case 3: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_KL, indexGenre);
-                    handleTransferGenre(data.songs.top100_KL, indexCategory);
                     break;
                 }
             }
             
             handleEventToRenderPagePlayMusic(data, indexCategory, indexGenre);
+            handleTransferGenre(data, indexCategory);
 
             // Ẩn slider
             slider.style.display = 'none';
@@ -538,15 +535,37 @@ function handleTransferGenre(data, indexCategory) {
     const chartsList100 = $('.charts__list100');
     const chartsList100Category = $('.charts__list100__category');
     [...categoryList].forEach((categoryItem, index) => {
+        // Index là indexGenre
         categoryItem.onclick = () => {
             $('.top100__tab__item.top100__tab__item--active').classList.remove('top100__tab__item--active');
             categoryItem.classList.add('top100__tab__item--active');
 
-            chartsList100Category.textContent = data[index].name;
-
-            chartsList100.innerHTML = renderChartsList(data[index].songs);
-
-            handleEventToRenderPagePlayMusic(data[index], indexCategory, index) // Top 100
+            switch (indexCategory) {
+                case 0: {
+                    chartsList100Category.textContent = data.songs.top100_VN[index].name;
+                    chartsList100.innerHTML = renderChartsList(data.songs.top100_VN[index].songs);
+                    handleEventToRenderPagePlayMusic(data, indexCategory, index);
+                    break;
+                }
+                case 1: {
+                    chartsList100Category.textContent = data.songs.top100_AM[index].name;
+                    chartsList100.innerHTML = renderChartsList(data.songs.top100_AM[index].songs);
+                    handleEventToRenderPagePlayMusic(data, indexCategory, index);
+                    break;
+                }
+                case 2: {
+                    chartsList100Category.textContent = data.songs.top100_CA[index].name;
+                    chartsList100.innerHTML = renderChartsList(data.songs.top100_CA[index].songs);
+                    handleEventToRenderPagePlayMusic(data, indexCategory, index);
+                    break;
+                }
+                case 3: {
+                    chartsList100Category.textContent = data.songs.top100_KL[index].name;
+                    chartsList100.innerHTML = renderChartsList(data.songs.top100_KL[index].songs);
+                    handleEventToRenderPagePlayMusic(data, indexCategory, index);
+                    break;
+                }
+            } 
         }
     })
 }
@@ -647,30 +666,27 @@ function handleEventsBoxRight(data) {
             let indexCategory = parseInt(item.dataset.category); //Category: Việt Nam, Âu Mỹ, Châu Á, Không Lời
             let indexGenre = parseInt(item.dataset.genre); //Genre: Nhạc Trẻ, Trữ Tình, Tiền Chiến, ...
 
-            handleEventToRenderPagePlayMusic(data, indexCategory, indexGenre);
-
             switch (indexCategory) {
                 case 0: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_VN, indexGenre);
-                    handleTransferGenre(data.songs.top100_VN, indexCategory);
                     break;
                 }
                 case 1: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_AM, indexGenre);
-                    handleTransferGenre(data.songs.top100_AM, indexCategory);
                     break;
                 }
                 case 2: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_CA, indexGenre);
-                    handleTransferGenre(data.songs.top100_CA, indexCategory);
                     break;
                 }
                 case 3: {
                     boxLeft.innerHTML = renderMusic(data.songs.top100_KL, indexGenre);
-                    handleTransferGenre(data.songs.top100_KL, indexCategory);
                     break;
                 }
             }
+
+            handleEventToRenderPagePlayMusic(data, indexCategory, indexGenre);
+            handleTransferGenre(data, indexCategory);
 
             // Render lại Box Right
             renderBoxRight(indexCategory);
