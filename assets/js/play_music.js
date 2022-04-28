@@ -254,8 +254,6 @@ function handlePlayMusic(data, index) {
 
             loadCurrentSong();
 
-            console.log(currentIndex);
-
             if (!isPlaying) {
                 // Nếu isPlaying = false
                 playPauseBtn.click();
@@ -374,17 +372,25 @@ function handlePlayMusic(data, index) {
 
             // Nếu mảng đã đầy thì reset thành mảng trống
             if (playedPlaylist.length == data.length) {
+                console.log(playedPlaylist);
                 playedPlaylist = [];
             }
 
             //playedPlaylist.push()
+            let indexRandom;
             for (let i = 0; i < playedPlaylist.length; i++) {
-                while (newIndex === playedPlaylist[i]) {
+                indexRandom = 0;
+                while (newIndex == playedPlaylist[i]) {
+                    indexRandom++;
+
                     newIndex = Math.floor(Math.random() * data.length);
+
+                    if (indexRandom >= 50) break;
                 }
             }
 
             currentIndex = newIndex;
+            console.log(currentIndex + ' ' + playedPlaylist.length);
         }
 
         // Xử lý khi bài hát chạy (thời gian thay đổi)

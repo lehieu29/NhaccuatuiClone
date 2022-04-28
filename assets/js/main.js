@@ -385,7 +385,8 @@ function renderName(singerName) {
 
 // https://raw.githubusercontent.com/lehieu29/NhaccuatuiClone/master/API.json
 // ../API.json
-const urlAPI = "https://raw.githubusercontent.com/lehieu29/NhaccuatuiClone/master/API.json";
+const urlAPI = "../API.json"
+// const urlAPI = "https://raw.githubusercontent.com/lehieu29/NhaccuatuiClone/master/API.json";
 
 const boxRightArray = [
     [
