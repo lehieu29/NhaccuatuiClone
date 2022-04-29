@@ -1,13 +1,13 @@
 function Slider(options) {
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         const sliderTrack = $(options.sliderTrack);
         const mySlides = $$(options.sliderItem);
         //Thời gian transition (Vd: transition: all 0.5s linear)
         const timeAnimation = 500;
-        
+
         let dots;
 
-        if(options.isDot) {
+        if (options.isDot) {
             dots = $$(options.sliderDots);
         }
 
@@ -23,10 +23,11 @@ function Slider(options) {
         //End
 
         // Tính tổng width của tất cả slide
-        for(let i = 0; i < mySlides.length; i++) {
+        for (let i = 0; i < mySlides.length; i++) {
             sliderTrackWidth += mySlides[i].offsetWidth;
         }
 
+        // Set width cho sliderTrack
         sliderTrack.style.width = sliderTrackWidth + 'px';
 
         let slideIndex = 2;
@@ -44,6 +45,7 @@ function Slider(options) {
 
         let isSlideShow = true;
 
+        // Dừng slide khi di chuột vào
         if (options.pauseOnHover) {
             const hoverSelector = $(options.hoverSelector);
 
@@ -56,23 +58,23 @@ function Slider(options) {
             }
         }
 
-        if(options.autoPlay) {
+        if (options.autoPlay) {
             this.setInterval(() => {
                 if (isSlideShow) {
                     nextBtn.click();
                 }
             }, options.time);
         }
-        
+
         nextBtn.addEventListener('click', handleNextBtn);
         prevBtn.addEventListener('click', handlePrevBtn);
 
         if (options.isDot) {
-            [...dots].forEach(function(dot) {
+            [...dots].forEach(function (dot) {
                 dot.onclick = () => {
                     currentSlideIndex = newSlideIndex;
                     newSlideIndex = parseInt(dot.dataset.index) + 2;
-    
+
                     changeSlide();
                 }
             })
@@ -84,6 +86,17 @@ function Slider(options) {
             newSlideIndex++;
 
             changeSlide();
+
+            handleSlideToLoop(); // Check xem slide tới cuối chưa
+
+            // Khi slide chạy remove event và kích hoạt lại event sau khi slide chạy xong
+            nextBtn.removeEventListener('click', handleNextBtn);
+            prevBtn.removeEventListener('click', handlePrevBtn);
+
+            setTimeout(() => {
+                nextBtn.addEventListener('click', handleNextBtn);
+                prevBtn.addEventListener('click', handlePrevBtn);
+            }, timeAnimation);
         }
 
         function handlePrevBtn() {
@@ -92,6 +105,17 @@ function Slider(options) {
             newSlideIndex--;
 
             changeSlide();
+
+            handleSlideToLoop(); // Check xem slide có phải là slide số 1 không => Chuyển về slide số ...
+
+            // Khi slide chạy remove event và kích hoạt lại event sau khi slide chạy xong
+            nextBtn.removeEventListener('click', handleNextBtn);
+            prevBtn.removeEventListener('click', handlePrevBtn);
+
+            setTimeout(() => {
+                nextBtn.addEventListener('click', handleNextBtn);
+                prevBtn.addEventListener('click', handlePrevBtn);
+            }, timeAnimation);
         }
 
         // Chuyển slide
@@ -130,44 +154,23 @@ function Slider(options) {
         }
 
         // Check khi newSlide tới cuối, setTimeout đợi khi kết thúc sự kiện transition rồi set newSlide về đầu để loop
-        nextBtn.addEventListener('click', () => {
-            if (newSlideIndex >= options.sliderLength + 2) {
+        function handleSlideToLoop() {
+            if ((newSlideIndex >= options.sliderLength + 2) || (newSlideIndex <= 1)) {
                 this.setTimeout(() => {
                     currentSlideIndex = newSlideIndex;
-                    newSlideIndex = 2;
-    
+
+                    if (newSlideIndex >= options.sliderLength + 2) {
+                        newSlideIndex = 2;
+                    } else {
+                        //Nếu ở slide số 1 
+                        newSlideIndex = options.sliderLength + 1;
+                    }
+
                     sliderTrack.style.transition = 'none';
 
                     HandleChangeSlide();
                 }, timeAnimation); // gán ở trên cùng = 500
             }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (newSlideIndex <= 1) {
-                // console.log('VO');
-                // console.log(options.sliderLength + 1);
-                this.setTimeout(() => {
-                    currentSlideIndex = newSlideIndex;
-                    newSlideIndex = options.sliderLength + 1;
-    
-                    sliderTrack.style.transition = 'none';
-    
-                    HandleChangeSlide();
-                }, timeAnimation); // gán ở trên cùng = 500
-            }
-        });
-
-        //add event click sau khi slide chạy xong
-        sliderTrack.addEventListener('transitionend', () => {
-            nextBtn.addEventListener('click', handleNextBtn);
-            prevBtn.addEventListener('click', handlePrevBtn);
-        })
-
-        //remove event click để đợi transition hết thì mới click chuyển slide được tiếp
-        sliderTrack.addEventListener('transitionstart', () => {
-            nextBtn.removeEventListener('click', handleNextBtn);
-            prevBtn.removeEventListener('click', handlePrevBtn);
-        })
+        }
     })
 }
