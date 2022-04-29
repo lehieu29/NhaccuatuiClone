@@ -378,11 +378,34 @@
                         <div class="header__upload">
                             <img src="./assets/img/upload_icon.png" alt="" class="header__upload__img">
                         </div>
-                        <div class="header__login btn">
-                            Đăng nhập
-                        </div>
-                        <div class="header__register btn">
-                            Đăng ký
+                        <div class="signup__login">
+                            <div class="header__login btn">
+                                Đăng nhập
+                            </div>
+                            <div class="header__register btn">
+                                Đăng ký
+                            </div>
+
+                            <div class="login__user__wrapper cursor--pointer">
+                                <img src="https://stc-id.nixcdn.com/v11/images/avatar_default_2020.png" alt="" class="user__avatar__img">
+                                <div class="user__info">
+                                    <div class="user__name">lehieu222</div>
+                                    <div class="user__coin">
+                                        <img src="https://stc-id.nixcdn.com/v11/images/header_new/ic_decor_ncoin.png" alt="" class="user__coin__img">
+                                        <span class="user__total__coin">0</span>
+                                    </div>
+                                </div>
+                                <div class="user__more">
+                                    <img src="https://stc-id.nixcdn.com/v11/images/header_new/arrow.png" alt="" class="user__more__img">
+                                </div>
+                                <ul class="user__list">
+                                    <li class="user__item hover--primary">Trang cá nhân</li>
+                                    <li class="user__item hover--primary">Nhạc của tui</li>
+                                    <li class="user__item hover--primary">Tài khoản</li>
+                                    <li class="user__item hover--primary">Lịch sử</li>
+                                    <li class="user__item hover--primary">Thoát</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1840,10 +1863,10 @@
         </div>
 
         <!-- Form Login -->
-        <div class="form__nct__wrapper">
+        <div class="form__nct__wrapper form__login">
             <div class="blur"></div>
 
-            <div class="form__nct form__login">
+            <div class="form__nct">
                 <div class="form__header">
                     <h2 class="form__heading">Đăng nhập</h2>
                     <div class="form__close cursor--pointer">
@@ -1863,14 +1886,18 @@
                                     Tên đăng nhập
                                     <span class="required"></span>
                                 </label>
-                                <input type="text" class="form__control" id="user-name">
+                                <div class="form__control__wrapper">
+                                    <input type="text" class="form__control" id="user-name">
+                                </div>
                             </div>
                             <div class="form__group">
                                 <label for="password" class="form__label cursor--pointer">
                                     Mật khẩu
                                     <span class="required"></span>
                                 </label>
-                                <input type="text" class="form__control" id="password">
+                                <div class="form__control__wrapper">
+                                    <input type="password" class="form__control" id="password">
+                                </div>
                             </div>
                             <div class="form__options">
                                 <div class="form__input--checkbox">
@@ -1914,7 +1941,116 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- Form register -->
+        <div class="form__nct__wrapper form__register">
+            <div class="blur"></div>
+
+            <div class="form__nct">
+                <div class="form__header">
+                    <h2 class="form__heading">Đăng ký</h2>
+                    <div class="form__close cursor--pointer">
+                        <i class="ti-close form__close__icon"></i>
+                    </div>
+                </div>
+    
+                <div class="form__container">
+                    <div class="form__box--left">
+                        <div class="required__text">
+                            Những thông tin có đánh dấu(<span class="required"></span>) là bắt buộc nhập.
+                        </div>
+                        <!-- thêm thẻ class required là dấu * -->
+                        <form action="">
+                            <div class="form__group">
+                                <label for="register__user-name" class="form__label cursor--pointer">
+                                    Tên đăng nhập
+                                    <span class="required"></span>
+                                </label>
+                                <div class="form__control__wrapper">
+                                    <div class="form__input__wrapper">
+                                        <input type="text" class="form__control" id="register__user-name" name="userName">
+                                        <div id="noteUserName" class="note__form">Bạn có thể sử dụng chữ cái, chữ số, gạch dưới và dấu chấm. Chiều dài từ 6-30 ký tự.</div>
+                                    </div>
+                                    <div class="form__error"></div>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="register__password" class="form__label cursor--pointer">
+                                    Mật khẩu
+                                    <span class="required"></span>
+                                </label>
+                                <div class="form__control__wrapper">
+                                    <div class="form__input__wrapper">
+                                        <input type="password" class="form__control" id="register__password" name="password">
+                                        <div id="notePassword" class="note__form">Chiều dài từ 6-30 ký tự. Không sử dụng tiếng Việt có dấu.</div>
+                                    </div>
+                                    
+                                    <div class="form__error"></div>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="register__password__confirmation" class="form__label cursor--pointer">
+                                    Nhật lại mật khẩu
+                                    <span class="required"></span>
+                                </label>
+                                <div class="form__control__wrapper">
+                                    <div class="form__input__wrapper">
+                                        <input type="password" class="form__control" id="register__password__confirmation" name="confir__password">
+                                        <div id="noteConfirmationPassword" class="note__form">Nhập lại mật khẩu giống như bên trên một lần nữa.</div>
+                                    </div>
+                                    <div class="form__error"></div>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="register__email" class="form__label cursor--pointer">
+                                    Email
+                                    <span class="required"></span>
+                                </label>
+                                <div class="form__control__wrapper">
+                                    <div class="form__input__wrapper">
+                                        <input type="email" class="form__control" id="register__email" name="email">
+                                        <div id="noteEmail" class="note__form">Điền vào Email bạn muốn sử dụng cho tài khoản này.</div>
+                                    </div>
+                                    <div class="form__error"></div>
+                                </div>
+                            </div>
+                            <div class="form__options">
+                                <div class="form__input--checkbox">
+                                    <input type="checkbox" name="accept__terms" id="accept__terms" class="cursor--pointer" checked>
+                                    <label for="" class="form__input__text">
+                                        Tôi đã đọc và đồng ý các điều kiện
+                                        <span class="cursor--pointer">Thỏa thuận sử dụng</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="form__submit cursor--pointer">Đăng ký mới</button>
+                        </form>
+                    </div>
+                    <div class="form__box--right">
+                        <div class="form__user">
+                            <div class="form__user__text">Bạn đã có tài khoản NCT ID</div>
+                            <buttom class="form__user__btn cursor--pointer">Đăng nhập ngay</buttom>
+                        </div>
+    
+                        <div class="form__line">
+                            <div class="form__line__text">Hoặc</div>
+                        </div>
+    
+                        <div class="form__more__login">
+                            <div class="form__login__item cursor--pointer">
+                                <i class="form__login__icon ti-facebook form__icon__fb"></i>
+                                <div class="form__item__text">Đăng nhập qua Facebook</div>
+                            </div>
+                            <div class="form__login__item cursor--pointer">
+                                <i class="form__login__icon ti-google form__icon__gg"></i>
+                                <div class="form__item__text">Đăng nhập qua Google +</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./assets/js/main.js"></script>
@@ -1933,6 +2069,8 @@
             centerMode: true,
             autoPlay: true,
             isDot: true,
+            pauseOnHover: true,
+            hoverSelector: '.slider__wrapper',
             time: 3000,
             sliderLength: 5
         });
@@ -1946,23 +2084,44 @@
             centerMode: false,
             autoPlay: true,
             isDot: false,
+            pauseOnHover: false,
             time: 2000,
             sliderLength: 16
         });
 
-        // Form Login
+        // Form Register
         Validator({
-            form: '.form__login',
+            form: '.form__register',
             formSelector: '.form__group',
             errorSelector: '.form__error',
             rule: [
-                Validator.isSubmit('#user-name'),
-                Validator.isSubmit('#password')
+                Validator.minLength('#register__user-name', 6, 'Tên tài khoản tối thiếu 6 ký tự'),
+                Validator.maxLength('#register__user-name', 30, 'Tên tài khoản tối đa 30 ký tự'), //  (Kiểm tra xem có 30 ký tự rồi k cho nhập nữa)
+                Validator.isUsed('#register__user-name', 'Tên tài khoản đã có người sử dụng'),
+
+                Validator.minLength('#register__password', 6, 'Mật khẩu tối thiểu 6 ký tự'), 
+                Validator.maxLength('#register__password', 30, 'Mật khẩu tối đa 30 ký tự'),
+
+                Validator.isRequired('#register__password__confirmation', 'Mật khẩu nhập lại không thể rỗng'),
+                Validator.isConfirmed('#register__password__confirmation', '#register__password', 'Mật khẩu nhập lại không đúng'),
+
+                Validator.isEmail('#register__email', 'Email không hợp lệ') 
             ],
             onSubmit: function(data) {
-              console.log(data);
+                let config = {
+                    account: data
+                }
+
+                localStorage.setItem("NhaccuatuiAccount", JSON.stringify(config));
             }
         });
+
+        // Toggle Form
+        toggleModal('.header__login', '.form__login');
+        toggleModal('.header__register', '.form__register');
+
+        // Form login
+        handleFormLogin();
 
         // TransferTabSelect Music
         handleTransferTabSelect('.charts__music', 0);

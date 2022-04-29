@@ -45,3 +45,6 @@ Note: cách chia grid
 		#fff
 		transform rotate
 		130 x 30
+
+Những thứ còn cần làm:
+    Responsive

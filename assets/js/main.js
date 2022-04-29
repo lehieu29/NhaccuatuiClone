@@ -250,19 +250,57 @@ inputAdvertise.onchange = () => {
 };
 
 // Bật/tắt modal Login
-const headerLogin = $('.header__login');
-const loginModal = $('.form__nct.form__login');
-const blurElement = $('.form__nct__wrapper .blur');
-const formClose = $('.form__close');
+function toggleModal(formBtnSelector, formSelector) {
+    const headerBtn = $(formBtnSelector);
+    const formElement = $(formSelector);
 
-headerLogin.onclick = () => {
-    loginModal.style.display = 'block';
-    blurElement.style.display = 'block';
+    const formModal = formElement.querySelector('.form__nct');
+    const blurElement = formElement.querySelector('.blur');
+    const formClose = formElement.querySelector('.form__close');
+
+    headerBtn.onclick = () => {
+        formModal.style.display = 'block';
+        blurElement.style.display = 'block';
+    }
+
+    formClose.onclick = () => {
+        formModal.style.display = 'none';
+        blurElement.style.display = 'none';
+    }
 }
 
-formClose.onclick = () => {
-    loginModal.style.display = 'none';
+function handleFormLogin() {
+    const formLogin = $('.form__login');
+    const formError = $('.form__login .form__error');
+
+    const userName = formLogin.querySelector('#user-name');
+    const passWord = formLogin.querySelector('#password');
+
+    formLogin.onsubmit = (e) => {
+        e.preventDefault();
+
+        let account = JSON.parse(localStorage.getItem("NhaccuatuiAccount")).account || {};
+
+        if (userName.value === account.userName && passWord.value === account.password) {
+            renderLogin('.form__login', userName.value);
+        } else {
+            formError.style.display = 'block';
+        }
+    }
+}
+
+function renderLogin(form, username) {
+    const formModal = document.querySelector(`${form} .form__nct`);
+    const blurElement = document.querySelector(`${form} .blur`);
+
+    formModal.style.display = 'none';
     blurElement.style.display = 'none';
+
+    const loginElement = $('.signup__login');
+    const userName = $('.user__name');
+
+    loginElement.classList.add('login');
+    userName.textContent = username;
 }
 
 //  End handle modal login
@@ -383,6 +421,7 @@ function renderName(singerName) {
 
 //Begin render top 100
 
+// Begin top 100
 // https://raw.githubusercontent.com/lehieu29/NhaccuatuiClone/master/API.json
 // ../API.json
 // const urlAPI = "../API.json"
@@ -476,8 +515,6 @@ const boxLeft = $('.box--left');
 const boxRight = $('.box--right');
 
 const charts = $$('.charts');
-const discoveryPlaylist = $('.discovery__playlist');
-const themeHot = $('.theme__hot');
 
 //Get tab select top 100
 const top100s = $$('.top100__music .sub__menu__item');
@@ -515,7 +552,7 @@ function handleTransferTop100(data) {
                     break;
                 }
             }
-            
+
             handleEventToRenderPagePlayMusic(data, indexCategory, indexGenre);
             handleTransferGenre(data, indexCategory);
 
@@ -527,6 +564,9 @@ function handleTransferTop100(data) {
 
             // Xử lý khi click vào các element box right
             handleEventsBoxRight(data);
+
+            // Reset title document
+            document.title = 'NhacCuaTui Clone - Nghe nhạc mới HOT nhất, tải nhạc MP3 chất lượng cao';
         }
     })
 }
@@ -566,7 +606,7 @@ function handleTransferGenre(data, indexCategory) {
                     handleEventToRenderPagePlayMusic(data, indexCategory, index);
                     break;
                 }
-            } 
+            }
         }
     })
 }
@@ -696,6 +736,9 @@ function handleEventsBoxRight(data) {
             handleEventsBoxRight(data);
 
             goToPage.click();
+
+            // Reset title document
+            document.title = 'NhacCuaTui Clone - Nghe nhạc mới HOT nhất, tải nhạc MP3 chất lượng cao';
         }
     })
 }

@@ -229,6 +229,8 @@ function handlePlayMusic(data, index) {
 
         activeSongPlayMusic();
 
+        document.title = data[currentIndex].title + ' - ' + data[currentIndex].creator;
+
         resetTime();
     }
 
@@ -372,7 +374,6 @@ function handlePlayMusic(data, index) {
 
             // Nếu mảng đã đầy thì reset thành mảng trống
             if (playedPlaylist.length == data.length) {
-                console.log(playedPlaylist);
                 playedPlaylist = [];
             }
 
@@ -390,7 +391,6 @@ function handlePlayMusic(data, index) {
             }
 
             currentIndex = newIndex;
-            console.log(currentIndex + ' ' + playedPlaylist.length);
         }
 
         // Xử lý khi bài hát chạy (thời gian thay đổi)

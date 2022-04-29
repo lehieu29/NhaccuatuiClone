@@ -89,7 +89,7 @@ html {
 }
 
 .form__header {
-    padding: 10px 20px;
+    padding: 6px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,11 +107,17 @@ html {
 }
 
 .form__close {
-    padding: 2px;
+    padding: 8px;
+    height: 32px;
+    transition: all 0.2s linear;
+}
+
+.form__close:hover {
+    background-color: #e2e2e2;
 }
 
 .form__close__icon {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
 }
 
 .form__container {
@@ -131,9 +137,9 @@ html {
 }
 
 .form__group {
-    height: 34px;
+    min-height: 34px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 12px;
 }
 
@@ -152,12 +158,19 @@ html {
     color: #e74c3c;
 }
 
-.form__control {
+.form__control__wrapper {
+    position: relative;
     height: 100%;
     width: 70%;
+}
+
+.form__control {
+    width: 100%;
+    height: 34px;
     border: 1px solid #dbdbdb;
     font-size: 1.2rem;
     line-height: 26px;
+    border-radius: 3px;
 }
 
 .form__control:focus {
