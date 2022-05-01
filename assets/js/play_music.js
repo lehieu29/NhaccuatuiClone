@@ -176,7 +176,7 @@ function handlePlayMusic(data, index) {
     var isPlaying = false;
     var isRandom = false;
     var isRepeat = false;
-    var playedPlaylist = [];
+    var unPlayedPlaylist = Array.from(Array(data.length).keys()); //Danh sách chưa phát
     var config = JSON.parse(localStorage.getItem("Nhaccuatui")) || {};
 
     // data 100 song
@@ -209,7 +209,7 @@ function handlePlayMusic(data, index) {
 
         if (config.isRandom) isRandom = config.isRandom;
         if (config.isRepeat) isRepeat = config.isRepeat;
-        
+
         if (config.currentVolume >= 0) currentVolume = config.currentVolume;
 
         //Active 2 nút
@@ -256,13 +256,8 @@ function handlePlayMusic(data, index) {
 
             loadCurrentSong();
 
-            if (!isPlaying) {
-                // Nếu isPlaying = false
-                playPauseBtn.click();
-            } else {
-                audioPlayMusic.play();
-                isPlaying = true;
-            }
+            audioPlayMusic.play();
+            isPlaying = true;
         }
 
         //Xử lý khi ấn btn prev
@@ -276,19 +271,18 @@ function handlePlayMusic(data, index) {
 
             loadCurrentSong();
 
-            if (!isPlaying) {
-                // Nếu isPlaying = false
-                playPauseBtn.click();
-            } else {
-                audioPlayMusic.play();
-                isPlaying = true;
-            }
+            audioPlayMusic.play();
+            isPlaying = true;
         }
 
         // Xử lý khi ấn btn random
         const randomBtnPlay = $('.box__random__play');
         randomBtnPlay.onclick = () => {
             isRandom = !isRandom;
+
+            if (isRandom) {
+                unPlayedPlaylist = Array.from(Array(data.length).keys());
+            }
 
             randomBtnPlay.classList.toggle('active');
 
@@ -317,7 +311,7 @@ function handlePlayMusic(data, index) {
             } else if (currentVolume == 0) {
                 // Nếu âm lượng đang bằng 0 thì gán lại giá trị cũ
                 console.log(oldVolume);
-                if(oldVolume) {
+                if (oldVolume) {
                     currentVolume = oldVolume;
                 } else {
                     currentVolume = 1;
@@ -368,29 +362,18 @@ function handlePlayMusic(data, index) {
 
         // Xử lý khi random bài hát
         function randomSong() {
-            playedPlaylist.push(currentIndex);
+            // Xóa phần tử có giá trị là currentIndex
+            unPlayedPlaylist.splice(unPlayedPlaylist.indexOf(currentIndex), 1);
 
-            let newIndex = Math.floor(Math.random() * data.length); // Random từ 0 -> 99 
-
-            // Nếu mảng đã đầy thì reset thành mảng trống
-            if (playedPlaylist.length == data.length) {
-                playedPlaylist = [];
+            if (unPlayedPlaylist.length == 0) {
+                unPlayedPlaylist = Array.from(Array(data.length).keys());
             }
 
-            //playedPlaylist.push()
-            let indexRandom;
-            for (let i = 0; i < playedPlaylist.length; i++) {
-                indexRandom = 0;
-                while (newIndex == playedPlaylist[i]) {
-                    indexRandom++;
+            let index = Math.floor(Math.random() * unPlayedPlaylist.length);
 
-                    newIndex = Math.floor(Math.random() * data.length);
+            currentIndex = unPlayedPlaylist[index];
 
-                    if (indexRandom >= 50) break;
-                }
-            }
-
-            currentIndex = newIndex;
+            console.log(currentIndex);
         }
 
         // Xử lý khi bài hát chạy (thời gian thay đổi)
@@ -500,9 +483,18 @@ function handlePlayMusic(data, index) {
         if ($('.list__song__item.list__song__item--active')) {
             $('.list__song__item.list__song__item--active').classList.remove('list__song__item--active');
         }
+
         listItemPlay[currentIndex].classList.add('list__song__item--active');
 
         listSongAlbum.scrollTop = listItemPlay[currentIndex].offsetHeight * currentIndex;
+
+        // Khi pause khi click vào bài khác thì phát nhạc
+        const playPauseBtn = $('.box__playing__play');
+
+        if (!playPauseBtn.matches('.pause')) {
+            playPauseBtn.classList.add('pause');
+            isPlaying = true;
+        }
     }
 
     function changeLyricSong() {

@@ -279,11 +279,18 @@ function handleFormLogin() {
     formLogin.onsubmit = (e) => {
         e.preventDefault();
 
-        let account = JSON.parse(localStorage.getItem("NhaccuatuiAccount")).account || {};
+        let account = JSON.parse(localStorage.getItem("NhaccuatuiAccount")).account || [];
 
-        if (userName.value === account.userName && passWord.value === account.password) {
-            renderLogin('.form__login', userName.value);
-        } else {
+        let isLogin = false;
+
+        for(let i = 0; i < account.length; i++) {
+            if (userName.value === account[i].userName && passWord.value === account[i].password) {
+                renderLogin('.form__login', userName.value);
+                isLogin = true;
+            }
+        }
+        
+        if (!isLogin) {
             formError.style.display = 'block';
         }
     }
@@ -301,6 +308,17 @@ function renderLogin(form, username) {
 
     loginElement.classList.add('login');
     userName.textContent = username;
+
+    logout();
+}
+
+function logout() {
+    const logOut = $('#logout');
+
+    logOut.onclick = function() {
+        const loginElement = $('.signup__login');
+        loginElement.classList.remove('login');
+    }
 }
 
 //  End handle modal login
@@ -567,6 +585,9 @@ function handleTransferTop100(data) {
 
             // Reset title document
             document.title = 'NhacCuaTui Clone - Nghe nhạc mới HOT nhất, tải nhạc MP3 chất lượng cao';
+
+            // Go to page
+            goToPage.click();
         }
     })
 }

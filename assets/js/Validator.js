@@ -114,19 +114,20 @@ Validator.minLength = function(selector, min, message) {
     }
 }
 
-Validator.maxLength = function(selector, max, message) {
-    return {
-        selector: selector,
-        Validate: function(value) {
-            return undefined;
-        }
-    }
-}
-
 Validator.isUsed = function(selector, message) {
     return {
         selector: selector,
         Validate: function(value) {
+            let config = JSON.parse(localStorage.getItem("NhaccuatuiAccount")) || {};
+
+            if (Array.isArray(config.account)) {
+                for(let i = 0; i < config.account.length; i++) {
+                    if (value == config.account[i].userName) {
+                        return message;
+                    } 
+                }
+            }
+
             return undefined;
         }
     }

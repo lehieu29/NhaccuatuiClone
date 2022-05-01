@@ -403,7 +403,7 @@
                                     <li class="user__item hover--primary">Nhạc của tui</li>
                                     <li class="user__item hover--primary">Tài khoản</li>
                                     <li class="user__item hover--primary">Lịch sử</li>
-                                    <li class="user__item hover--primary">Thoát</li>
+                                    <li class="user__item hover--primary" id="logout">Thoát</li>
                                 </ul>
                             </div>
                         </div>
@@ -1968,7 +1968,7 @@
                                 </label>
                                 <div class="form__control__wrapper">
                                     <div class="form__input__wrapper">
-                                        <input type="text" class="form__control" id="register__user-name" name="userName">
+                                        <input type="text" class="form__control" id="register__user-name" name="userName" maxlength="30">
                                         <div id="noteUserName" class="note__form">Bạn có thể sử dụng chữ cái, chữ số, gạch dưới và dấu chấm. Chiều dài từ 6-30 ký tự.</div>
                                     </div>
                                     <div class="form__error"></div>
@@ -1981,7 +1981,7 @@
                                 </label>
                                 <div class="form__control__wrapper">
                                     <div class="form__input__wrapper">
-                                        <input type="password" class="form__control" id="register__password" name="password">
+                                        <input type="password" class="form__control" id="register__password" name="password" maxlength="30">
                                         <div id="notePassword" class="note__form">Chiều dài từ 6-30 ký tự. Không sử dụng tiếng Việt có dấu.</div>
                                     </div>
                                     
@@ -1995,7 +1995,7 @@
                                 </label>
                                 <div class="form__control__wrapper">
                                     <div class="form__input__wrapper">
-                                        <input type="password" class="form__control" id="register__password__confirmation" name="confir__password">
+                                        <input type="password" class="form__control" id="register__password__confirmation" name="confir__password" maxlength="30">
                                         <div id="noteConfirmationPassword" class="note__form">Nhập lại mật khẩu giống như bên trên một lần nữa.</div>
                                     </div>
                                     <div class="form__error"></div>
@@ -2096,11 +2096,9 @@
             errorSelector: '.form__error',
             rule: [
                 Validator.minLength('#register__user-name', 6, 'Tên tài khoản tối thiếu 6 ký tự'),
-                Validator.maxLength('#register__user-name', 30, 'Tên tài khoản tối đa 30 ký tự'), //  (Kiểm tra xem có 30 ký tự rồi k cho nhập nữa)
                 Validator.isUsed('#register__user-name', 'Tên tài khoản đã có người sử dụng'),
 
                 Validator.minLength('#register__password', 6, 'Mật khẩu tối thiểu 6 ký tự'), 
-                Validator.maxLength('#register__password', 30, 'Mật khẩu tối đa 30 ký tự'),
 
                 Validator.isRequired('#register__password__confirmation', 'Mật khẩu nhập lại không thể rỗng'),
                 Validator.isConfirmed('#register__password__confirmation', '#register__password', 'Mật khẩu nhập lại không đúng'),
@@ -2108,8 +2106,12 @@
                 Validator.isEmail('#register__email', 'Email không hợp lệ') 
             ],
             onSubmit: function(data) {
-                let config = {
-                    account: data
+                let config = JSON.parse(localStorage.getItem("NhaccuatuiAccount")) || {};
+
+                if (Array.isArray(config.account)) {
+                    config.account.push(data);
+                } else {
+                    config.account = [data];
                 }
 
                 localStorage.setItem("NhaccuatuiAccount", JSON.stringify(config));

@@ -48,3 +48,10 @@ Note: cách chia grid
 
 Những thứ còn cần làm:
     Responsive
+
+    bug ấn pause xong click vào bài khác k chuyển nút pause/play
+
+    Random --> OK
+
+	Chức năng logout --> OK
+    Lỗi slider --> OK
