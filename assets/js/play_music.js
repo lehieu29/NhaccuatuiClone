@@ -372,8 +372,6 @@ function handlePlayMusic(data, index) {
             let index = Math.floor(Math.random() * unPlayedPlaylist.length);
 
             currentIndex = unPlayedPlaylist[index];
-
-            console.log(currentIndex);
         }
 
         // Xử lý khi bài hát chạy (thời gian thay đổi)
