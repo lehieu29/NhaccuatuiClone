@@ -1582,18 +1582,21 @@
 }
 
 .form__login .form__error {
-    display: none;
+    position: relative;
+
     user-select: none;
     margin-top: 16px;
+    width: 500px;
+    left: -40px;
+}
+
+.form__login .error__text {
     padding: 0 16px;
     background-color: #e64e4e;
     color: #fff;
     font-size: 1.5rem;
     line-height: 30px;
     height: 30px;
-    position: relative;
-    width: 500px;
-    left: -40px;
 }
 
 .form__login .form__error__icon {

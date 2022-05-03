@@ -434,16 +434,17 @@
     }
 }
 
-@media (min-width: 940px) and (max-width: 1024px) {
+@media (min-width: 940px) and (max-width: 1023px) {
     .wide {
         width: 960px;
     }
 }
 
 /* > PC low resolution */
-@media (min-width: 1025px) and (max-width: 1239px) {
+@media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
-        width: 984px;
+        width: 100vw;
+        padding: 0 10px;
     }
 
     .wide .row {

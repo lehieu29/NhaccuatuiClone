@@ -310,7 +310,6 @@ function handlePlayMusic(data, index) {
                 audioPlayMusic.volume = 0;
             } else if (currentVolume == 0) {
                 // Nếu âm lượng đang bằng 0 thì gán lại giá trị cũ
-                console.log(oldVolume);
                 if (oldVolume) {
                     currentVolume = oldVolume;
                 } else {
